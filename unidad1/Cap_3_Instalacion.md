@@ -1,4 +1,5 @@
 # Instalación desde GitHub.com
+##### por [Patricio Gonzalez Vivo](www.patriciogonzalezvivo.com)
 
 ## 1. Instalación del cliente git
 

@@ -1,4 +1,6 @@
-# ¿Qué es openFrameworks?
+# ¿Qué es openFrameworks? 
+##### por [Jeff Crouse](http://www.jeffcrouse.info/)
+ 
 openFrameworks es un conjunto de herramientas de código abierto en C++ diseñado para ayudar al proceso creativo. Proporciona un marco sencillo e intuitivo para la experimentación. Este kit une varias librerías de uso común bajo una misma coherencia y estilo para su uso general y reutilización. Estas librerías son:
 
 - [OpenGL](http://www.opengl.org/), [Glew](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) y [cairo](http://cairographics.org/) para los gráficos

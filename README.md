@@ -31,7 +31,7 @@ Desarrollado por Zach Lieberman, Theodore Watson y Arturo Castro, con la ayuda d
 ## Programa
 
 ### Unidad nº1: Introducción
-¿Qué es openFrameworks? ¿Qué se puede hacer con él? Ejemplos y trabajos reconocidos. ¿Cómo se instala?. Uso y manejo de repositorios Git. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Compilar los primeros ejemplos.
+¿Qué es openFrameworks? ¿Qué es C++? ¿Qué se puede hacer en oF? ¿Cómo se instala?. Uso y manejo de repositorios Git. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Compilar los primeros ejemplos.
 
 Material extra:
 
