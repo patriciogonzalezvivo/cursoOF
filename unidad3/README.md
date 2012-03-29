@@ -1,4 +1,6 @@
-### Unidad nº3: La belleza y la matemática
+[![logo](http://www.patriciogonzalezvivo.com/images/tutoriales/oF-workshop.jpg)](http://www.patriciogonzalezvivo.com)
+
+# Unidad nº3: La belleza y la matemática
 Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
 
 
@@ -13,3 +15,5 @@ Material extra:
 
 - "Mathematics and Physics for Programmers", Danny Kodicek, Charles River Media (2005)
 - “Essentia Mathematics for Games & interactive Applicatios” James M. Van Verth & Lars M. Bishop, Morgan Kaufmann (2008)
+
+[![logoFinal](http://www.patriciogonzalezvivo.com/greenTreePie.jpg)](http://www.patriciogonzalezvivo.com)
