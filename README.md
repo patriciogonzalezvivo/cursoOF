@@ -30,28 +30,8 @@ Desarrollado por Zach Lieberman, Theodore Watson y Arturo Castro, con la ayuda d
 
 ## Programa
 
-### Unidad nº1: Introducción
-¿Qué es openFrameworks? ¿Qué es C++? ¿Qué se puede hacer en oF? ¿Cómo se instala?. Uso y manejo de repositorios Git. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Compilar los primeros ejemplos.
-
-Material extra:
-
-[openframeworks.cc/tutorials/](http://www.openframeworks.cc/tutorials/)
-
-[oftutorials.com](http://oftutorials.com/)
-
-
-[Jeff Crouse´s Parsons Course](https://github.com/jefftimesten/CodeForArt)
-
-
-[vimeo.com/13160134](http://vimeo.com/13160134)
-
-[vimeo.com/13159243](http://vimeo.com/13159243)
-
-
-[vimeo.com/13159451](http://vimeo.com/13159451)
-
-[vimeo.com/13159856](http://vimeo.com/13159856)
-
+### [Unidad nº1: Introducción](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/README.md)
+¿Qué es openFrameworks? ¿Qué es C++? ¿Qué se puede hacer en oF? ¿Cómo se instala?. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Uso y manejo de repositorios Git.
 ### Unidad nº2: La base dura
 Breve relato sobre la relación de los sistemas Unix y C. Presentación del lenguaje C++. Breve descripción del proceso de pre-compilación y compilación en C++. Cómo dibujar objetos sencillos en pantalla. Familiarización con el sistema de ejes cartesianos. ¿Qué es una variable? ¿Qué tipos hay? Jugar a mover cosas con el mouse. Cargar imágenes y moverlas. Loopeo, pruebas lógicas, funciones y casteo de variables. 
 
