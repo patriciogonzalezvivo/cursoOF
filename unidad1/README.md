@@ -5,10 +5,16 @@
 
 - [¿Qué es C++?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Que_es_cpp.md)
 
-- [¿Cómo se instala?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_3_Instalacion.md)
+- [Su vínculo con los sistemas *nix](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_3_intro_a_unix.md)
 
+- [¿Cómo se instala openFrameworks?](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_4_Instalacion.md)
 
-Uso y manejo de repositorios Git. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Compilar los primeros ejemplos.
+- [¿Cómo es la estructura de oF?](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_5_estructura_oF.md)
+
+- [oF para los que vienen de Processing](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_6_desde_processing.md)
+
+- [Introducción al uso de repositorios git](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_7_intro_a_git.md)
+
 
 # Material extra
 
@@ -16,14 +22,11 @@ Uso y manejo de repositorios Git. Compilando y ejecutando ejemplos. Estructura d
 
 [oftutorials.com](http://oftutorials.com/)
 
-
 [Jeff Crouse´s Parsons Course](https://github.com/jefftimesten/CodeForArt)
-
 
 [vimeo.com/13160134](http://vimeo.com/13160134)
 
-[vimeo.com/13159243](http://vimeo.com/13159243)
-
+[vimeo.com/13159243](http://vimeo.com/13159243)
 
 [vimeo.com/13159451](http://vimeo.com/13159451)
 
