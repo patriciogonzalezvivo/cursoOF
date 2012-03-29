@@ -57,7 +57,7 @@ Puppet Parade es una instalación interactiva por Emily Watson y Theo Gobeille d
 
 [Más información...](http://www.creativeapplications.net/openframeworks/puppet-parade-openframeworks/)
 
-### [Interactivo de la pared en la UD](https://vimeo.com/27500054)
+### [UD Interactive Wall](https://vimeo.com/27500054)
 
 <iframe src="http://player.vimeo.com/video/27500054" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
