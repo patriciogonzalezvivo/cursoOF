@@ -3,7 +3,9 @@
 
 - [¿Qué es openFrameworks?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_1_Que_es_oF.md)
 
-- [¿Cómo se instala?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Instalacion.md)
+- [¿Qué es C++?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Que_es_cpp.md)
+
+- [¿Cómo se instala?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_3_Instalacion.md)
 
 
 Uso y manejo de repositorios Git. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Compilar los primeros ejemplos.
