@@ -2,96 +2,116 @@
 date: 2012/02/23 19:52:00
 title: Basic introduction to git and OF
 summary: A short introduction to git in connection with openFrameworks
-author: Christoph Buchner
+author: 
 author_site: 
 ---
 
-This tutorial contains a short introduction to the distributed version control system **git**, why it's a good idea to use it when coding, and its usage in connection with openFrameworks and [github](www.github.com).
 
-You will learn how to create a git repository, start a simple OF project and use git to track your changes. You will also learn how to accomplish the most frequent tasks in git.
 
-## Git basics
+# Bases sobre repositorios Git
+##### por Christoph Buchner (traducido por Patricio Gonzalez Vivo)
 
-### Why version control?
+Este tutorial contiene una breve introducción al sistema de control de versiones de repositorios git. Es una buena ida para comenzar a desarrollar código utilizándolo en tus propios proyectos o para interactuar con la comunidad openFrameworks y [github] (www.github.com).
 
-Version control is a tool which enables you to easily preserve history, changes, and different variants of code you write.
-It is an immeasurable improvement over not keeping backups, or backing up manually via zipping your program's folder or a similar mechanism.
+Veremos cómo crear un repositorio git, iniciar un proyecto y rastrear los cambios. Además de aprender cómo llevar a cabo las tareas más frecuentes en git.
 
-Furthermore, it enables you to cooperate with others on code in a meaningful and efficient way, so there's really no reason not to do it, it is definitely gonna make your life much easier.
+## ¿Porqué es importante?
 
-### Basic info about git
+El control de versiones es una herramienta que te permite mantener fácilmente la historia, los cambios, y las diferentes variantes de código que escriben.
+Es una mejora incalculable el no tener que guardar copias de seguridad de forma manual a través de comprimir la carpeta de su programa o un mecanismo similar.
 
-[Git](http://en.wikipedia.org/wiki/Git_%28software%29) is the version control system of choice for openFrameworks and github, so this is what we are gonna use. 
-It is a so-called [distributed revision control system](http://en.wikipedia.org/wiki/Distributed_revision_control), which basically means it's not necessary to have a central server/repository running for using it.
+Además, te permite cooperar con los demás en el código de una manera significativamente más eficaz, por lo que no hay realmente ninguna razón para no hacerlo, sin duda va a hacer tu vida mucho más fácil.
 
-If you have just discovered git, there are a couple of resources you should look through before continuing with this tutorial. They *teach you the basics of how to use git*. After that, we will touch upon some of the things that will come up when you're using git with OF.
+## Información básica sobre Git
 
-[gitref.org](http://gitref.org/) is a nice and concise reference of the essentials of git. It takes about 30min to read through, and you'll come out smarter at the end.
+[Git](http://en.wikipedia.org/wiki/Git_%28software%29) es el sistema de control de versiones de elección para openFrameworks y github, así que esto es lo que vamos a utilizar.
+Es un sistema de revisión llamado [control distribuido](http://en.wikipedia.org/wiki/Distributed_revision_control), lo que básicamente significa que no es necesario tener un servidor central / repositorio ejecutando para su uso.
 
-[The github help page](http://help.github.com/) deals with basis usage, concepts and terms of git and github. It is good to get a first idea about the stuff you can typically do with git.
+Si es la primera vez que escuchas sobre git, hay un par de los recursos que debes googlear antes de continuar con este tutorial. Ellos *le enseñará lo básico de cómo usar* git. Después de eso, vamos a tocar algunas de las cosas que surgen cuando estás usando git con OF.
 
-## Using git with OF projects
+[gitref.org](http://gitref.org/) es una referencia concisa de los elementos esenciales de git. Setarda como 30 minutos en leerla, pero vale la pena.
 
-If you want to use git with your projects, it makes sense to **start as early as possible**, ideally before you even start coding.
+[La página de ayuda github](http://help.github.com/) posee información sobre el uso básico, los conceptos y términos de git y github. Es bueno tener una primera idea acerca de las cosas que normalmente se puede hacer con git.
 
-Following are some noteworthy things to mention, aside of basic usage, which is covered by the links in the previous section.
+
+## Usando Git para proyecto en oF
+
+Si desea utilizar git con sus proyectos, tiene sentido **comenzar tan pronto como sea posible**, idealmente antes de que siquiera empezar a programar.
+
+A continuación se presentan algunas de las cosas digno de mención, aparte del uso de base, que está cubierto por los vínculos de la sección anterior.
+
 	
-### Ignoring improper files
-It's important to **only have git track the right files**.
-Auto-generated files, temporary files, binaries, user-specific files should not be part of the repository, since they are either generated by the source code in the repository, or too specific to a certain user.
+### Ignorando archivos
+Es importante que git **sólo analice los archivos correctos.**
+Los que son generados automáticamente, temporales, binarios o específicos de usuario no deberían formar parte del repositorio, ya que están generados por el código fuente para un determinado usuario.
 
-In git, you have the possibility to specify elaborate ignore patterns using `.gitignore` files (mind the `.`). 
-A **pre-made `.gitignore` file** with typically useful options is already part of your project, if you generated it with the project generator.
-A useful collection of `.gitignore` files for a wide variety of situations can be found [here](https://github.com/github/gitignore).
+En git, existe la posibilidad de especificar elaborados patrones para ignorar archovos utilizando el archivo `.gitignore` (el `.` es importante).
+Un `.gitignore ` pre-hecho esta adjunto en tu proyecto si haz bajado oF desde el respositorio git.
 
-Be aware that files which are already part of the repository are not ignored. 
-Also, once files are added to the repository, they become part of the history and are there to stay. This way, it's very easy to unnecessarily bloat your repository size because there's no easy way to purge erroneously added files from the repository (especially if you have already pushed your repo online).
-For these reasons, it's **really important** to be attentive when adding files to your repository. 
+Una colección útil de `.gitignore` con una amplia cantidad de archivos para distintas situaciones puede ser encontrado [aquí](https://github.com/github/gitignore).
+
+Tenga en cuenta que los archivos que ya forman parte del depósito no se tienen en cuenta.
+Además, una vez que los archivos se añaden al repositorio, se convierten en parte de la historia y estarán allí para quedarse. De esta manera, es muy fácil de aumentar innecesariamente el tamaño de su repositorio, porque no hay manera fácil de purgar los archivos añadidos por error desde el repositorio (especialmente si usted ha llevado ya a su repositorio en línea).
+Por estas razones, es **muy importante** estar atentos al añadir archivos a su repositorio.
 
 ### Git GUIs
-If you don't want to use the command line, there is a number of visual git clients out there you can use.
-Stackoverflow has a nice collection of candidates for [Linux](http://stackoverflow.com/q/2141611/599884), [MacOS](http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x) and [Windows](http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows).
+Si no desea utilizar la línea de comandos, hay un número de clientes git visuales por ahí que puede utilizar.
+StackOverflow tiene una buena colección de los candidatos para [Linux](http://stackoverflow.com/q/2141611/599884), [MacOS](http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x) y [Windows](http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows).
 
-### Remotes: origin and upstream
-[Remotes](http://gitref.org/remotes/) are identifiers for remote repositories your repository might want to interact with. 
-They make it easy to access those repositories without typing URLs all the time.
-It is customary to name the copy of your own repository (e.g. on github) `origin`. This is automatically done if you `git clone` a repository from github.
-Additionally, if your repository is a fork of another repository, e.g. if you have your own copy of OF, that repository is normally called `usptream`.
+### Repositorios remotos: origin y upstream
+[Remotes](http://gitref.org/remotes/) son los identificadores de los repositorios remotos con los que probablemente quieras interactuar.
+Hacen que sea fácil acceder a los repositorios sin tener que escribir las direcciones URL en todo momento.
+Es costumbre nombrar a la copia de tu propio repositorio (por ejemplo, en github) como `origin` . Esto se hace automáticamente cuando escribes `git clone` a un repositorio de GitHub.
+Por otro lado, si el repositorio es un fork de otro repositorio, por ejemplo, si usted tiene su propia copia de la OF, ese repositorio normalmente se le llama `usptream`.
 
-### git, coming from SVN
-If you come from SVN, and want to jump into git, things can be confusing. There are some resources on the web, one tutorial explaining the equivalent commands can be found [here](http://git.or.cz/course/svn.html).
-One thing to note is that a commit is much less serious in git, since it will remain in your local repository. In git, **"commit early, commit often"** is the key.
+### Git para los que vienen de SVN
+Si haz usado SVN, y queres pasar a git, las cosas pueden ser confusas. Hay algunos recursos en la web, un tutorial que explica los comandos equivalentes que se puede encontrar [aquí](http://git.or.cz/course/svn.html).
+Una cosa a tener en cuenta es que un `commit` es mucho menos grave en git, ya que permanecerá en su repositorio local. En git la clave es  **"commit early, commit often"**.
 
-Another distinction is that you got your own repository is much more separate from a central repository.
+Otra distinción es que tener tu propio repositorio es mucho más independiente de un repositorio central.
 
-Also, merging and branching are things which are central to how git works, so use it liberally.
+Además, la fusión (merging) y la ramificación (branching) son las cosas que son fundamentales para la forma git trabaja, a fin de utilizarlo libremente.
 
-### Pushing new branches to github
-If you have some new work in a separate branch, and you want to push this to your github repository, you say
+### Empujando nuevas versiones (Pushingnew branches) a Github
+Si usted tiene un trabajo nuevo en una rama separada, y que desea llevar este a su repositorio github, usted dice
+
+```
 	git push origin new-work
+```
 	
-### Creating a local copy of a branch on a remote
-If you want to check out a branch on a repository, which does not yet exist in your local repository, you use
+### Crear una copia local de un branch en un repositorio remoto 
+
+Si quieres echa un vistazo a la rama de un repositorio, que todavía no existe en el repositorio local, se utiliza
+
+```
 	git fetch origin
 	git checkout --track origin/interesting-branch
-The second command creates a local branch named `interesting-branch` that matches the `origin/interesting-branch` branch and tells git that you want to be able to easily push and pull from the branch on the remote.
+```
 
-### Deleting branches on a remote
-If you have worked on some branch, for example for a pull request to get some bug fixes into OF, and you don't need this branch any more, e.g. if the PR has been merged already, then you can delete the branch on the remote by saying
+El segundo comando crea una sucursal local llamado `interesting-branch` que coincide con el origen de `origin/interesting-branch` le dice a Git que desea ser capaz de subir (push) con facilidad y sacar de la rama (branch) en el control remoto.
+
+### Borrando ramas (branches) en el repo remoto 
+Si usted ha trabajado en alguna rama, por ejemplo, para una solicitud de extracción para obtener algunas correcciones de errores en el OF, y usted no necesita esta rama más, por ejemplo, si el PR se ha fusionado ya, continuación, puede eliminar la rama en el control remoto diciendo
+
+```
 	git push origin :old-branch
+```
 
-### Git workflow for contributing to OF
-[This](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow) is a document which describes the workflow the OF devs follow when developing. 
-If you want to successfully contribute code to openFrameworks, you should follow this document.
-It's also useful to look at it if you want to pick up some *tips for managing larger projects*.
+### Flujo de trabajo para contribuir con OF 
+[Este](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow) es documento que describe el flujo de trabajo de la de desarrolladores seguir para el desarrollo.
+Si desea contribuir con éxito el código de openFrameworks, debe seguir este documento.
+También es útil leerlo en el caso que quieras trabajar en un gran proyecto junto con otros.
 
-## Solutions for commonly occuring problems
 
-There are certain problematic situations which you are probably going encounter when working with git.
-In what follows, some of these situations are identified and a solution method is identified.
+## Soluciones para los problemas más frecuentes 
 
-### Pulling when you have uncommitted changes
-If you have uncommitted changes, but you're not yet ready to commit, and want to update your working branch by pulling from a remote, it will fail because git refuses to pull. 
+Hay ciertas situaciones con las que probablemente se vallan a encontrar cuando trabaja con git.
+En lo que sigue, algunas de estas situaciones se identifican y un método de solución es identificado.
+
+
+### Hacer un pull con cambios uncommitted
+
+Si usted ha hecho cambios sin confirmar, pero no está todavía listo para hacer un commit, y desea actualizar su branch de trabajo por medio de un pull al repositorio remoto, va a ser imposible ya que git se negará a realizarlo.
 
 A way around this is to use `git stash`.
 This is a really useful [feature](http://gitready.com/beginner/2009/01/10/stashing-your-changes.html) similar to a clipboard, where you can temporarily store changes while doing something else.
