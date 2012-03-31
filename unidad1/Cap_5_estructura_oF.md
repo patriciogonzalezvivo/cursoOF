@@ -1,4 +1,5 @@
 # Estructura oF 
+##### por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
 OpenFrameworks es en esencia es una colección de librerías integradas bajo un mismo formato de forma que puedan trabajar juntas. Por ejemplo: openGL para gráficos, freeImages para imágenes, fmod para sonidos, etc. Muchas de las funciones y clases en oF acceden a estas funciones y clases de estas librerías sólo para darles un formato similar. De tal forma de brindar un formato consistente para todo el entorno. 
 

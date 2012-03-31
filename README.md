@@ -55,8 +55,32 @@ Agregando addons a proyectos. ofxOpenCV, ofxOsc, ofxXmlSettings. [ofxAddons.com]
 ### [Clase nº8: Meta programar](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad8/README.md)
  La integración del pensamiento divergente/convergente como modelo de un diseño mixto. Programación en paralelo y GLSL Shaders. Diseño de aplicaciones mediante patrones y modelos. El proceso de desarrollo desde el diagrama UML y su implementación.
 
+## Material y referencias
 
-## Autor
+### En español
+
+- [El foro de este curso](http://groups.google.com/group/ofTaller) es en español para comenzar a tejer una red local. Una buena antesala para sacarse dudas en la lengua materna
+
+### En ingles
+
+- [openFrameworks.cc/about](http://www.openframeworks.cc/about/)
+
+- [Documentación oficial](http://www.openframeworks.cc/documentation/) donde se puede encontrar descripciones de las clases y funciones que componen openFrameworks
+
+- [El foro](http://forum.openframeworks.cc/) es probablemente el mejor lugar para obtener respuestas a sus preguntas y entrar en contacto con la enorme comunidad que rodea a OF
+
+- [Base de C++ para usuarios openFrameworks](http://www.doc.gold.ac.uk/~ma501ed/Open%20Frameworks.pdf)
+
+- [Filminas](http://www.roxlu.com/blog/entry/145/openframeworks-007-presentations) hechas por Roxlu para la release 007 del 2011
+
+- [Materiales del curso](https://github.com/obviousjim/OFIntros) que dieron Brett Renfer, James George y Chris Allick
+
+- [Programming Interactivity ](http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143 ) un gran libro que cubre openFrameworks, procesamiento y Arduino.
+
+- [Creative Aplications](http://www.creativeapplications.net/)
+
+
+## A cargo de ...
 
 Patricio González Vivo, Licenciado en Psicología, especializado en Terapias Expresivas combinadas. Becas de investigación: “Interactivos 2010” en Espacio Fundación Telefónica y  Taller de producción en el MediaLab del Centro Cultural Español en el 2011.  Docente adjunto de “Conexión Creativa® I y II” en la Facultad de Artes Dramáticas de la Universidad del Salvador (2007-2010). Actualmente se desempeña como Profesor Titular de Programación Aplicada al arte I y II en la carrera de Artes Multimediales del IUNA. Además se desempeña como Psicólogo Clínico y como consultor y desarrollador para distintos estudios y museos nacionales e internacionales. 
 

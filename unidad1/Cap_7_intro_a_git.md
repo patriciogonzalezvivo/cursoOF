@@ -1,17 +1,7 @@
----
-date: 2012/02/23 19:52:00
-title: Basic introduction to git and OF
-summary: A short introduction to git in connection with openFrameworks
-author: 
-author_site: 
----
-
-
-
 # Bases sobre repositorios Git
-##### por Christoph Buchner (traducido por Patricio Gonzalez Vivo)
+##### por Christoph Buchner (en proceso de traducción por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com))
 
-Este tutorial contiene una breve introducción al sistema de control de versiones de repositorios git. Es una buena ida para comenzar a desarrollar código utilizándolo en tus propios proyectos o para interactuar con la comunidad openFrameworks y [github] (www.github.com).
+Este tutorial contiene una breve introducción al sistema de control de versiones de repositorios git. Es una buena ida para comenzar a desarrollar código utilizándolo en tus propios proyectos o para interactuar con la comunidad openFrameworks y [github](www.github.com).
 
 Veremos cómo crear un repositorio git, iniciar un proyecto y rastrear los cambios. Además de aprender cómo llevar a cabo las tareas más frecuentes en git.
 
@@ -33,6 +23,7 @@ Si es la primera vez que escuchas sobre git, hay un par de los recursos que debe
 
 [La página de ayuda github](http://help.github.com/) posee información sobre el uso básico, los conceptos y términos de git y github. Es bueno tener una primera idea acerca de las cosas que normalmente se puede hacer con git.
 
+También existe un resumen en [titanPad](http://piratepad.net/ofgitcheatsheet) de comandos frecuentes hecho para la comunidad OF.
 
 ## Usando Git para proyecto en oF
 

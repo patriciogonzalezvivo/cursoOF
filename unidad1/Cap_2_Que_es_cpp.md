@@ -1,5 +1,5 @@
 # ¿Qué es C++?
-##### por [Jeff Crouse](http://www.jeffcrouse.info/)
+##### por [Jeff Crouse](http://www.jeffcrouse.info/) y traducido por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
 Hemos aprendido en la última sección que openFrameworks no es un lenguaje de programación, sino más bien un framework para la creación de programas C++. ¿Pero lo qué es [C++](http://en.wikipedia.org/wiki/C%2B%2B)?
 

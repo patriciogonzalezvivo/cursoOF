@@ -1,5 +1,5 @@
 # ¿Qué es openFrameworks? 
-##### por [Jeff Crouse](http://www.jeffcrouse.info/)
+##### por [Jeff Crouse](http://www.jeffcrouse.info/) y traducido por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
  
 openFrameworks es un conjunto de herramientas de código abierto en C++ diseñado para ayudar al proceso creativo. Proporciona un marco sencillo e intuitivo para la experimentación. Este kit une varias librerías de uso común bajo una misma coherencia y estilo para su uso general y reutilización. Estas librerías son:
 
@@ -80,16 +80,3 @@ Para obtener la documentación de vídeo más y detalles del proceso de diseño 
 <iframe src="http://player.vimeo.com/video/29391633" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 Una gran cosa acerca openFrameworks es que lo fácil de incorporar código C + + desde casi cualquier biblioteca. Para ello, Arturo y Kyle utiliza la [biblioteca FaceTracker de Jason Saragih](http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html) para crear una técnica de reemplazo de la cara que Kyle llamado "traje de Scramble", inspirada en la tecnología de ficción a partir de 1977 Philip K. Dick, la novela, "A Scanner Darkly". Es efectivamente un manto que oculta la identidad del usuario por lo que es imposible de describir o recordar ellos.
-
-
-## ¿Dónde puedo conseguir más información sobre openFrameworks?
-
-- [openFrameworks.cc/about](http://www.openframeworks.cc/about/)
-
-- [Documentación oficial](http://www.openframeworks.cc/documentation/) donde se puede encontrar descripciones de las clases y funciones que componen openFrameworks
-
-- [Foro](http://forum.openframeworks.cc/) Probablemente el mejor lugar para obtener respuestas a sus preguntas
-
-- [Programming Interactivity ](http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143 ) un gran libro que cubre openFrameworks, procesamiento y Arduino.
-
-- [Creative Aplications](http://www.creativeapplications.net/)

@@ -1,4 +1,5 @@
 # Introducción a sistemas *nix
+##### por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
 Si bien la relación C - Unix es íntimamente estrecha desde el comienzo de su historia. Es parte del proceso de profesionalizar nuestra labor como desarrolladores utilizar arquitectura robusta, modular, flexible y gratuita para este taller.
 
