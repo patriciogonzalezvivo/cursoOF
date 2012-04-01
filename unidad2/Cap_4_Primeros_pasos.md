@@ -1,77 +1,79 @@
 
-# 1. Dibujando
-Let's start by drawing something. If we want to draw something we have to put it inside the function `void testApp::draw()` in the file ```testApp.cpp```.
+# Mi primer sistema de particulas 
+### una aproximación “divertida” a clases y herencias en C++
+##### por Patricio González Vivo
+
+##Introducción 
+
+Este archivo da por sentado que se han leído los anteriores, se ha instalado satisfactoriamente openFrameworks, creado los proyectos y compilado el core de librerías. A su vez también se recomienda que antes de arrancar se halla compilado los proyectos de ejemplo que se pueden encontrar en el apps/examples y apps/addonsExamples .
+
+También damos por sentado que se ha aprendido a compilar en cada plataforma utilizando correctamente el IDE correspondiente.
+
+
+## 1er paso: dibujar algo 
+
+Empecemos dibujando algo escribiendo en el testApp.cpp:
+
+~~~~{.cpp}
+	#include "testApp.h"
+
+	void testApp::setup(){
+
+	}
+
+	void testApp::update(){
+
+	}
+
+	void testApp::draw(){
+		ofBackground(0);
+		ofSetColor(255,0,0);		// ofSetColor() altera el color de
+							// todas las figuras que se dibujen 
+							// luego de ser declarada
+		ofCircle(100, 100, 30);
+	}
+~~~~
  
-Let's start with a graphic version of "Hello World". This draws a blue circle:
+Aquí sólo estamos dibujando es: primero el fondo ( ofBackground(int) ) y luego un círculo ( ofCircle(float,float,float) ) rojo ( ofSetColor(int,int,int) ) en 100 de x y 100 de con 30 pixels de radio. 
+
+Si quisiéramos dibujar un rectángulo la función que necesitaríamos sería ofRect(x,y,width,height).
+
+Jugando con los valores x e y podemos comprender rápidamente cuales son los valores 0,0 en pantalla. Al mismo tiempo que modificando los valores de color en ofSetColor y ofBackground podemos comprender las diferentes formas de declarar un color de acuerdo a la luminancia monocromática o en cada canal.
+
+Al mismo tiempo podemos explorar el uso de los métodos de ofFill() y ofNoFill() los cuales establecen si las figuras se dibujarán rellenas o tan sólo el borde de las mismas.
+
+Otros valores para cambiar es el ancho de la linea: ofSetLineWidth( float ancho )
+## 2do paso: moverlo
+
+Para agregarle un poco de movimiento podemos dibujar en cada itineración el mismo círculo en la posición donde se encuentra el mouse. Esto se realiza con dos variables propias del ofBaseApp que poseen la posición en X ( mouseX )y en Y ( mouseY ) del mouse.
 
 ~~~~{.cpp}
 	void testApp::draw(){
 		ofBackground(0);
-		ofSetColor(0,0,255);
-		ofFill();
-		ofCircle(100, 100, 30);
+		ofSetColor(255, 0, 0);
+		ofCircle(mouseX, mouseY, 30);
 	}
 ~~~~
 
-For those that know a little about Processing this may look familiar, the biggest difference being the "of" prefix. 
-
-In the first line we are filling the background with black with `ofBackground(0);`. It's also possible to use RGB values by typing `ofBackground(76,63,72);` or something more intuitive like `ofBackground(ofColor::black);`. 
-After drawing the background we are setting up the color with `ofSetColor(int r, int g, int b)` that will remain from until it is changed. openFramework's origins are based in OpenGL and like OpenGL once a state is applied it will remain in the state from that point until it's changed again. It may seem strange in the beginning but soon you will see that it is a pretty good and efficient way of dealing with properties. 
-So like with ofBackground, you can use options like `ofSetColor(ofColor:blue);` and it will change the color of the circle. 
-The next line, `ofFill();` , defines the fill style of the shape (filling the shape with color). The opposite is `ofNoFill();` that will only draw the outline. You can change the size of the outline with `ofSetLineWidth( 4 );`
-Once we set up our background and drawing color we draw a small circle with a radius of 30 pixels at the `100,100` position.
-
-![coordinates](http://patriciogonzalezvivo.com/images/tutoriales/coordinates.png)
-
-As you may notice, `x` and `y` coordinates are setup in a way that the `0,0` position it's the top left corner. 
-
-So if we have a `1024,768` window and we want to draw something on the middle we can do something like: `ofCircle(1024/2, 768/2, 30);`. What happens if the windows is resized? The circle is no longer centered because we used "hardcoded" values.
-
-This is where some the oF methods `ofGetWindowWidth()` and `ofGetWindowHeight()` become very handy. These methods return the current values of the width and height of the windows. There are two similar functions named `ofGetScreenWidth()` and `ofGetScreenHeight()` that instead of returning the windows parameters the return the width and height of the entire screen.
-Let's use some of this new stuff we just learned about:
+Si en vez de dibujar un círculo dibujamos un rectángulo notaremos que el modo de posicionar el rectángulo es distinto para uno y otro. En el primero el dibujo se ancla en el centro del círculo, mientras que en el segundo se dibuja desde la esquina superior izquierda.
 
 ~~~~{.cpp}
 	void testApp::draw(){
-		ofBackground(30,10,30);
-		ofSetColor(ofColor::blue);
-		ofFill();
-		ofCircle( ofGetWindowWidth()*0.5, ofGetWindowHeight()*0.5, 30);
-	}
-~~~~
-So, now when you resize the window this little blue world remains centered. Congratulations!!
-
-Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofLine()`, `ofRect()` that are related to drawing. 
-
-In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF Style" and things will become pretty intuitive. 
-
-CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-style artwork. [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edges and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background.
-
-![kandisky](http://patriciogonzalezvivo.com/images/tutoriales/kandinsky.jpg)
- 
-
-## 2. Moving things around
-
-So far, so good. Right now everything is a little static and the complete absence of interactivity is probably getting you anxious. Let's start moving things around.   
-
-Two variables available to every openFrameworks application are `mouseX` and `mouseY`. Let's go back to our previous example and use these variables inside `testApp::draw()`.
-
-~~~~{.cpp}
-	void testApp::draw(){
-		ofBackground(30,10,30);
-		ofSetColor(ofColor::blue);
-		ofFill();
-		ofCircle( mouseX, mouseY, 30);
+		ofBackground(0);
+		ofSetColor(255, 0, 0);
+		ofRect(mouseX, mouseY, 30, 30);
 	}
 ~~~~
 
-If you try to do the same with a rectangle ( `ofRect(mouseX,mouseY, 30, 30);`) you will notice that the center of the rectangle it just don't fit with the mouse position. This is because by default, rectangles are draw from the top left corner.  
-Fortunately we have options and can use `ofSetRectMode(OF_RECTMODE_CENTER);` to set the anchor point to the center of the shape. 
-Probably every time you see something that starts with "OF_" and in all-caps it means that you are dealing with modes and pre-defined types. Feeling adventerous, explore using the auto-completion list of your IDE or options like  "Jump to definition".
+Esto puede cambiarse con el método ofSetRectMode( OF_RECTMODE_CENTER ) / ofSetRectMode( OF_RECTMODE_CORNER ) 
 
-Right now we are only working on the `draw()` methods and if we want some oF magic to happen we have to start using `update()` and `setup()`. So let's create two variables that are going to store the `x` and `y` properties for the circle. If we create them inside the `draw()` or `update()` methods the values will be created and destroyed every time a loop is completed. In order to allow the variables to survive each loop we need to define them at the top of testApp. The best place to do this is inside the file `testApp.h` like this:
+Si quisiéramos volver este código más prolijo podríamos actualizar la posición de la figura en el update() y dibujar la figura en el draw(). Para poder preservar esa información necesitaríamos agregar una variable global a toda la clase del testApp.
 
-
+En el testApp.h:
 ~~~~{.cpp}
+	#pragma once
+	#include "ofMain.h"
+
 	class testApp : public ofBaseApp{
 	public:
 		void setup();
@@ -88,234 +90,589 @@ Right now we are only working on the `draw()` methods and if we want some oF mag
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		float xPos;
-		float yPos;
+		int	x,y;
 	};
 ~~~~
 
-We are going to use these two variables to store the last position of the ball and progressively move the ball towards the mouse.
+En el testApp.cpp:
 
 ~~~~{.cpp}
+	#include "testApp.h"
+
 	void testApp::setup(){
-		// Smooth edges
-		ofEnableSmoothing();
-
-	    // Fixed framerate
-		ofSetFrameRate(30);
-
-		// Initial x position of the ball
-		xPos = ofGetWindowWidth()*0.5;
-
-		// Initial y position of the ball
-		yPos = ofGetWindowHeight()*0.5; 
+		x = ofGetWindowWidth()/2; 	// El circulo comienza en el centro
+		y = ofGetWindowHeight()/2;	// de la ventana
 	}
 
 	void testApp::update(){
-		xPos += ( mouseX - xPos )*0.1;
-		yPos += ( mouseY - yPos )*0.1;
-		// We calculate the x and y distance 
-		// of the ball to the mouse position and 
-		// add a little portion of it to the x and y 
-		// variables
+		x = mouseX;
+		y = mouseY;
 	}
 
 	void testApp::draw(){
-		ofBackgroundGradient(ofColor::gray,ofColor(30,10,30), OF_GRADIENT_CIRCULAR);
-		ofSetColor(200,200,124);
-		ofFill();
-		ofCircle( xPos, yPos, 30);
+		ofBackground(0);
+		ofSetColor(255, 0, 0);
+		ofCircle(x, y, 30);
 	}
 ~~~~
 
-Nice, isn't it?
-Other very typical interaction is using the the keyboard. openFrameworks has some default methods for capturing mouse and keyboard events. Take a look at the bottom of the `testApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
+Con los métodos ofGetWindowWidth() y ofGetWindowHeight() podemos saber cuanto mide de alto y largo nuestra ventana. De igual manera con los métodos ofGetScreenWidth() y ofGetScreenHeight() podríamos saber el alto y largo del monitor.
 
-At this point we can add some randomness interaction using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
-So let's add something really simple. Here every time you press the mouse the ball will go to a random position.
+Tarea: investigar que otros parámetros se puede objetener de la ventana activa en el header ofAppRunner.h dentro del directorio openFrameworks/libs/app
 
-~~~~{.cpp}
-	void testApp::mousePressed(int x, int y, int button){
-		xPos = ofRandom( ofGetWindowWidth() );
-		yPos = ofRandom( ofGetWindowHeight() );
-	}
-~~~~
+
+## 3er paso: volverlo una clase
 
-CHALLENGE: Now that we have learned how to make variables that you can access from anywhere in the class we can start thinking what possiblities this opens up. For instance, you could take your Kandinsky-style project and make your shapes jump to a new position every time you press the mouse button. Maybe try adding some basic animations to them.
+Ahora que nuestro “programa” posee cierta lógica interna respecto a como inicia, como acutaliza y como se dibuja, podríamos transformar este círculo en un objeto. Más bien en una clase Pelota.
 
+ Por un lado creamos la clase ( esto quiere decir empezar creando el archivo header o .h y el source o .cpp correspondiente )
 
-## 3. Thank God we have classes
-
-If you are have doing the Challenges you have may have ended up with a lot of repeated code. Forutunately computers make repetition easy. 
-Here we will scratch the surface of Object Oriented Programing (a primary feature of C++) in order to make things easier, more readable and less repetitive.
-
-Let's imagine a ball.
-It's an round object that have some properties like the position and the color, also do things like move around. All this abstract items can be imagined as:
-
-Ball:
-
-- position (property)
-
-- color (property)
-
-- move (function or method)
-
-This exactly what a `.h` it's a list of things that makes an object. So let's add two new files to our project ( this depends on the IDE you are using ), one it's going to be a `.h` file call `ball.h` (here we are going to define the elements of our ball) and the other one a `.cpp` call `ball.cpp` ( here we are going to write how these things work together ).
-
-![newFile](http://patriciogonzalezvivo.com/images/tutoriales/newFile.png)
-
-The `ball.h` file should look like: 
+Comencemos con Pelota.h
 
 ~~~~{.cpp}
-	#ifndef ball_h
-	#define ball_h
+	#ifndef PELOTA	// recordemos que esto previene declarar la misma clase
+	#define	PELOTA	// dos veces
 
-	#include "ofMain.h"
+	#include "ofMain.h"	// Aqui agregamos los metodos y clases de oF
 
-	class Ball {
-	public:
-    		// Constructor
-    		Ball();     
-    
-    		// Methods
-    		void moveTo();
-    		void draw();
-    
-    		// Properties
-    		int x;
-    		int y;
-    		ofColor color;
+	class Pelota {
+	public:			// Todos los métodos aquí son públicos por los que cualquiera puede
+			// verlos y acceder a ellos.
+	
+		Pelota();	// Constructor indispensable en toda clase
+	
+		void update(int _x, int _y);
+		void draw();
+	
+		int x,y;
 	};
 	#endif
 ~~~~
 
-Congratulations, you just created your own Class! There are couple of new things are going on here. The first 2 lines (`#ifndef..` prevent the compiler from using copying the file multiple times. This is a standard practice in C++ and you probably want to leave things the way they are. You are basically saying, "Hey compiler, don't compile this stuff two times, and for compiling you will need ofMain.h header file.". Including `ofMain.h` will give you access to all the methods and objects of openFrameworks. This is what makes your code oF-based and not just C++ code and where the magic happens.
-
-To create a object you need to call the Class's constructor. The constructor `Ball()` is the first thing that will execute and create the Ball. It's like when you write `int i;` and 'i' automatically is initially set to zero. int's constructor took care of that for you. 
-The properties should look familiar at this point but a new method is the `draw()` function.
-
-IMPORTANT: Take a look to the `};` at the end of the class. That's super important! Without it you will get annoying errors that are difficult track down.  
-
-Inside the file `ball.cpp` let's prepare everything:
+En el Pelota.cpp:
 
 ~~~~{.cpp}
-	#include "ball.h"
-
-	Ball::Ball(){
-		// Set the initial color
-		color.set( ofRandom(255), ofRandom(255), ofRandom(255));
-    
-		// Initial x position of the ball
-		x = ofRandom( ofGetWindowWidth() ); 
-    
-		// Initial y position of the ball
-		y = ofRandom( ofGetWindowHeight() ); 
+	#include "Pelota.h"		// Referencia al header donde los siguientes métodos estan 
+							//declarados
+	Pelota::Pelota(){
+		x = ofGetWindowWidth()/2;
+		y = ofGetWindowHeight()/2;
 	}
 
-	void Ball::moveTo(){
-    
+	void Pelota::update(int _x, int _y){
+		x = _x;
+		y = _y;
 	}
 
-	void Ball::draw(){
-		ofSetColor(color);
-		ofFill();
-		ofCircle( x, y, 30);
+	void Pelota::draw(){
+		ofSetColor(255, 0, 0);
+		ofCircle(x, y, 30);
 	}
 ~~~~
 
-As you see here we are going to implement of the methods defined on `ball.h`.
-We have to said to the compiler two things:
-
-- `#include "ball.h"` this stuff responds to "ball.h" file
-
-- `Ball::` tells the compiler that this method is from `Ball` class. You can picture it like a first part of a full name. 
-
-The last step for adding a Class is to add it to `testApp.h` with a `#include "ball.h"` 
+Ahora tan sólo falta agregar este objeto a nuestro testApp.h
 
 ~~~~{.cpp}
 	#pragma once
 
 	#include "ofMain.h"
-
-	#include "ball.h" // Add this
+	#include "Pelota.h"		// es importante agregar el header donde se declara el objeto
 
 	class testApp : public ofBaseApp{
-  	public:
-    		void setup();
-    		void update();
-    		void draw();
+	public:
+		void setup();
+		void update();
+		void draw();
 
-    		void keyPressed  (int key);
-    		void keyReleased(int key);
-    		void mouseMoved(int x, int y );
-    		void mouseDragged(int x, int y, int button);
-    		void mousePressed(int x, int y, int button);
-    		void mouseReleased(int x, int y, int button);
-    		void windowResized(int w, int h);
-    		void dragEvent(ofDragInfo dragInfo);
-    		void gotMessage(ofMessage msg);
-    
-    		Ball theBall;	// Replaces the previous variables 
-							// with a new object that contains 
-							// the previous information
+		void keyPressed  (int key);
+		void keyReleased(int key);
+		void mouseMoved(int x, int y );
+		void mouseDragged(int x, int y, int button);
+		void mousePressed(int x, int y, int button);
+		void mouseReleased(int x, int y, int button);
+		void windowResized(int w, int h);
+		void dragEvent(ofDragInfo dragInfo);
+		void gotMessage(ofMessage msg);
+		
+		Pelota	p;
 	};
 ~~~~
 
-In `testApp.cpp` we can change things to look like this:
+En el el testApp.cpp tan sólo debe escribirse:
 
 ~~~~{.cpp}
+	#include "testApp.h"
+
 	void testApp::setup(){
-		// Smooth edges
-		ofEnableSmoothing();
-
-		// Fixed framerate
-		ofSetFrameRate(30);
-
-		// Not need to define the initial position of the ball
-		// because the Ball constructor does it for you     
 	}
 
 	void testApp::update(){
-		theBall.x += ( mouseX - theBall.x )*0.1;    
-		theBall.y += ( mouseY - theBall.y )*0.1;
+		p.update(mouseX,mouseY);
 	}
 
 	void testApp::draw(){
-		ofBackgroundGradient(ofColor::gray,ofColor(30,10,30), OF_GRADIENT_CIRCULAR);
-    		
-		// Now we have a method that does the drawing stuff
-		theBall.draw();
+		ofBackground(0);
+		p.draw();
 	}
 ~~~~
 
-So now we have a general object that´s automatically is created with some random values, but if we want we can access to the information inside it by using `object.property` or `object.method()`. 
-This means that every time we want a new Ball we just to create it and draw it! Is it not awesome?
 
-One last thing to talk about how you can pass some parameters to a object method. If we look to the `testApp::update()` code we are changing the `x` and `y` properties by using the dot-syntax `.`. That's not bad, but it to make things more readable and intuitive if it looked like `myBall.moveTo(mouseX,mouseY)`?
-So let´s change `ball.h` and  `ball.cpp`.
+## 4to paso: aplicarle cierta física
+
+Desde la versión 007 oF cuenta con clases para realizar cálculos vectoriales (de dos, tres o cuatro dimensiones) de forma sencilla. Hechándole una mirada al directorio openFrameworks/libs/openframeworks/math podemos encontrar que también existen clases nativas para realizar calculos de matrices y quaterniones.
+En este paso vamos a hacer uso de esas clases reemplazando los int x e y por un vector de dos dimensiones con valores de punto flotante ( numero con coma ) que guarde la posición de nuestro objeto, para eso nos vamos a valer de la clase ofVec2f() definida en ofVec2f.h
+Además agregaremos dos vectores más para calcular la aceleración y la velocidad.
+Así mismo crearemos dos variables más. Una contendrá el tamaño del objeto, mientras que la última será una variable de tipo ofColor() para contener el color del mismo. Este tipo de variables nos permite realizar operaciones de color a la vez que converciones. Vale la pena hecharle una mirada a libs/openFrameworks/types/ofColor.h para comprender cómo se las declara y cuantas funciones útiles posee.
+
+En la rutina de update haremos que la aceleración actualice la velocidad. La cual dependerá de la resistencia o densidad del espacio, la cual moverá la posición del objeto. 
+
+Para que nuestro objeto se mueva en vez de pasarle una posición le pasaremos un vector de fuerza hacia donde debe moverse.
+
+Una vez hecho todo esto nuestra clase Pelota.h debería lucir algo así:
 
 ~~~~{.cpp}
-	void Ball::moveTo(int _xDestiny, int _yDestiny){
-		x += ( _xDestiny - x )*0.1;
-		y += ( _yDestiny - y )*0.1;
+	#ifndef PELOTA
+	#define PELOTA
+	#include "ofMain.h"
+
+	class Pelota {
+	public:
+		Pelota();
+	
+		void agregarFuerza(ofVec2f fuerza);	// aquí le pasamos la fuerza
+	
+		void update();	
+		void draw();
+	
+		ofColor	color;	
+		ofVec2f 	pos, vel, acc;
+
+		int	tamanio;
+	};
+	#endif
+~~~~
+
+Mientras que el Pelota.cpp: 
+
+~~~~{.cpp}
+	#include "Pelota.h"
+
+	Pelota::Pelota(){
+		tamanio = 30;
+		color.set(255,0,0);
+	
+		pos.set( ofGetWindowWidth()*0.5 , 	// es un buen hábito
+				ofGetWindowHeight()*0.5 );	// usar más matemáticas,
+										// sobretodo normales para
+										// hacer ajustes
+		vel.set(0,0);
+		acc.set(0,0);
+	}
+
+	void Pelota::agregarFuerza(ofVec2f fuerza){
+		acc += fuerza;
+	}
+
+	void Pelota::update(){
+		vel += acc;		// Suma la aceleración a la velocidad
+		vel *= 0.03;	// Le agregamos algo de resistencia o densidad
+		pos += vel;		// Suma la velocidad a la posición
+		acc *= 0;		// Vuelve a cero la aceleración
+	}
+
+	void Pelota::draw(){
+		ofSetColor(color);
+		ofCircle(pos.x, pos.y, tamanio);
 	}
 ~~~~
 
-And use it like like this on the testApp project
+Mientras que en el testApp.cpp ahora actualizamos la posición de la siguiente manera:
 
 ~~~~{.cpp}
 	void testApp::update(){
-    		theBall.moveTo(mouseX,mouseY);
+		ofVec2f destino, haciaDestino;
+
+		destino.set(mouseX,mouseY);
+		haciaDestino = destino - p.pos;
+	
+		p.agregarFuerza(haciaDestino);
+		p.update();
 	}
 ~~~~
 
+Al compilar podemos ver como la pelota es atraída por el cursor. Sin embargo esto dista mucho a comportarse como una pelota.
+## 5to paso: un poco de onda
 
-## 4. Let's get physical
+Como parte de algunas funciones matemáticas incorporadas al framework podemos agregarle valores random para hacer las cosas un poco más interesante. Para esto a la hora de inicializar utilizaremos la clase ofRandom de dos maneras. Un con un sólo parámetro explicitando el máximo y otra por medio de dos especificando el minimo y máximo de los valores random que devuelva.
+Para este ejemplo le agregaremos una función más a nuestra clase Pelota para saber cuando ha salido de la pantalla de tal forma que podamos volverla a crear. También dejaremos que las pelotas caigan por gravedad.
 
-Before we continue on our way a to proper particle system. I have good news, You don´t have to deal with heavy maths in order to create some nice physics based effects. openFrameworks provides some very nice functionality that makes this much easier. However if you want to dive into the details, take a look at Keith´s tutorials at [Math Tutorials](http::/openframeworks.cc/tutorials/maths/) that can lead you to crazy awesome new things.
+Pelota.h:
 
-Some of the most helpful classes are contained in ofVectorMath that allow us to work with forces very easily. Just like have in our `Ball` class, `ofVec2f` has `x` and `y` values, and you can access to them in the same way we just do with `ball.x` and `ball.y`. `ofVec2f` also have really handy methods like `.dot()` and also operator `+`, `+`, `*` and `/` that do the math for you.
+~~~~{.cpp}
+	#ifndef PELOTA
+	#define	PELOTA
+	#include "ofMain.h"
 
- 
- 
+	class Pelota {
+	public:
+		Pelota();
+	
+		void agregarFuerza(ofVec2f fuerza);
+		bool pasoElBorde();	
+		void update();
+		void draw();
+	
+		ofColor	color;	
+		ofVec2f pos, vel, acc;
+	
+		int	tamanio;
+	};
+	#endif
+~~~~
+
+Pelota.cpp:
+
+~~~~{.cpp}
+	#include "Pelota.h"
+
+	Pelota::Pelota(){
+		tamanio = ofRandom(20);
+		color.set(ofRandom(255),ofRandom(255),ofRandom(255));
+	
+		pos.set( ofGetWindowWidth()*0.5 , ofGetWindowHeight()*0.5 );
+		vel.set( ofRandom(-1,1),ofRandom(-1,1));
+		acc.set( ofRandom(-1,1),ofRandom(-1,1));
+	}
+
+	void Pelota::agregarFuerza(ofVec2f fuerza){
+		acc += fuerza;
+	}
+
+	void Pelota::update(){
+		vel += acc;	// Suma la aceleración a la velocidad
+		pos += vel;	// Suma la velocidad a la posición
+		acc *= 0;	// Vuelve a cero la aceleración
+	}
+
+	void Pelota::draw(){
+		ofSetColor(color);
+		ofCircle(pos.x, pos.y, tamanio);
+	}
+
+	bool Pelota::pasoElBorde(){
+		bool rta = false;	
+		if ( pos.x < 0 || pos.y < 0 || pos.x > ofGetWindowWidth() || pos.y > ofGetWindowHeight())
+			rta = true;
+	
+		return rta;
+	}
+~~~~
+
+en el update() del testApp.cpp:
+
+~~~~{.cpp}
+	void testApp::update(){
+		p.agregarFuerza(ofVec2f(0,0.0098));
+		p.update();
+	
+		if (p.pasoElBorde()){
+			p = Pelota();			// las pelotas se vuelven a
+			p.pos.set(mouseX,mouseY);	// crear donde esta el cursor
+		}
+	}
+~~~~
+
+## 6to paso: multiplicarlo
+
+En cuanto sistema de partículas se refiere, más es mejor. Así que hagamos un array de estos objetos que estamos usando. Los arrays en C++ son estáticos. Eso quiere decir que una vez creados con cierto tamaño no pueden modificarse, por lo menos en principio.
+Vamos a utilizar el pre-compilador para crear una variable constante donde guardar el número de objetos en nuestro array. Esto nos ayudará luego a itinerar por cada uno de ellos fácilmente. Pudiendo cambiar la cantidad total de forma sencilla.
+
+En el testApp.h:
+
+~~~~{.cpp}
+	#pragma once
+
+	#include "ofMain.h"
+	#include "Pelota.h"
+
+	#define TOTAL 100		// Esta bueno explorar hasta que numero puede llegar
+
+	class testApp : public ofBaseApp{
+	public:
+			void setup();
+			void update();
+			void draw();
+
+			void keyPressed  (int key);
+			void keyReleased(int key);
+			void mouseMoved(int x, int y );
+			void mouseDragged(int x, int y, int button);
+			void mousePressed(int x, int y, int button);
+			void mouseReleased(int x, int y, int button);
+			void windowResized(int w, int h);
+			void dragEvent(ofDragInfo dragInfo);
+			void gotMessage(ofMessage msg);
+		
+			Pelota	p[TOTAL];
+	};
+~~~~
+
+En el testApp.cpp:
+
+~~~~{.cpp}
+	#include "testApp.h"
+
+	void testApp::setup(){
+		for(int i = 0; i < TOTAL; i++){
+			p[i].pos.set(ofRandom(ofGetWindowWidth()),ofRandom(ofGetWindowHeight()));
+		}
+	}
+
+	void testApp::update(){
+		for(int i = 0; i < TOTAL; i++){
+			p[i].agregarFuerza(ofVec2f(0,0.0098));
+			p[i].update();
+	
+			if (p[i].pasoElBorde()){
+				p[i] = Pelota();
+				p[i].pos.set(mouseX,mouseY);
+			}
+		}
+	}
+
+	void testApp::draw(){
+		ofBackground(0);
+	
+		for(int i = 0; i < TOTAL; i++){
+			p[i].draw();
+		}
+	}
+~~~~
+
+## 7mo paso: buscando sutilezas
+
+Otra forma de jugar con valores random es utilizar ofNoise. Este método devuelve valores más orgánicos. Una de las variantes de la misma clases es ofSignedNoise().
+En este paso intentaremos darle movimientos y efectos más interesantes a nuestra clase. Para eso le agregaremos un tiempo de vida a nuestra Pelota. Al mismo tiempo que estaremos atentos a la cantidad de itineraciones del loop principial del testApp. Si su procesador es rápido quizá hayan notado que por momentos las partículas se movían sumamente rápido y por otros momentos se enlentecían. Eso era causado porque no habíamos fijado la cantidad de frames por segundos en las que nuestro loop principal trabaja. Lo fijaremos en 60 con el método ofSetFramerate(60); . También habilitaremos el uso de colores con canal alpha mediante ofEnableAlphaBlending() 
+A nuestra clase le agregarémos un par de funciones y variables de tal modo que queden así el header Pelota.h:
+
+~~~~{.cpp}
+	#ifndef PELOTA
+	#define	PELOTA
+
+	#include "ofMain.h"
+
+	class Pelota {
+	public:
+		Pelota();
+	
+		void agregarFuerza(ofVec2f fuerza);
+		void agregarNoise(float _angulo, float _turbulencia);	//agregará un movimiento aleatorio suave
+		
+		void agregarAlphaFade(bool _fadeOut);	// hará que se desvanezcan
+		void agregarScaleFade(bool _melt);		// hará que se achiquen
+	
+		bool pasoElBorde();
+		bool estaViva();						// esta función chequea si esta viva
+		
+		void update(float _limiteDeVelocidad);	// el update quitará vida y limitará el movimiento
+
+		void draw();
+	
+		ofColor	color;
+	
+		ofVec2f pos, vel, acc;
+		float alphaF, escalaF;
+		int vida,vidaInicial, tamanio;
+	};
+	#endif
+~~~~
 
 
+En el source Pelota.cpp:
+
+~~~~{.cpp}
+	#include "Pelota.h"
+
+	Pelota::Pelota(){
+		tamanio = ofRandom(20);
+		color.set(ofRandom(255),ofRandom(255),ofRandom(255));
+	
+		pos.set( ofGetWindowWidth()*0.5 , ofGetWindowHeight()*0.5 );
+		vel.set( ofRandom(-1,1),ofRandom(-1,1));
+		acc.set( ofRandom(-1,1),ofRandom(-1,1));
+	
+		alphaF	= 1;
+		escalaF = 1;
+	
+		vida = vidaInicial = ofRandom(200,1000);
+	}
+
+	void Pelota::update(float _limiteDeVelocidad = 0.0){
+		vel += acc;	// Suma la aceleración a la velocidad
+	
+		if (_limiteDeVelocidad != 0)
+			vel.limit(_limiteDeVelocidad);			
+		pos += vel;	// Suma la velocidad a la posición
+		acc *= 0;	// Vuelve a cero la aceleración
+	
+		vida--;
+	}
+
+	void Pelota::agregarFuerza(ofVec2f fuerza){
+		acc += fuerza;
+	}
+
+	void Pelota::agregarNoise(float _angulo, float _turbulencia){
+		float angulo = ofSignedNoise(pos.x * 0.005f, pos.y *0.005f) * angulo;
+		ofVec2f noiseVector( cos( angulo ), sin( angulo ) );
+		acc += noiseVector * _turbulencia * (1.0 - ofNormalize(vida, 0, vidaInicial));
+	}
+
+	void Pelota::agregarAlphaFade(bool _fadeOut = true){
+		if (_fadeOut)
+			alphaF = 1.0f-ofNormalize(vida, 0,vidaInicial);
+		else 
+			alphaF = ofNormalize(vida, 0,vidaInicial);
+	}
+
+	void Pelota::agregarScaleFade(bool _melt = true){
+		if (_melt)
+			escalaF = 1.0f-ofNormalize(vida, 0,vidaInicial);
+		else 
+			escalaF = ofNormalize(vida, 0,vidaInicial);
+	}
+
+	void Pelota::draw(){
+		ofSetColor(color, color.a * alphaF );
+		ofCircle(pos.x, pos.y, tamanio * escalaF );
+	}
+
+	bool Pelota::pasoElBorde(){
+		bool rta = false;
+	
+		if ( pos.x < 0 || pos.y < 0 || pos.x > ofGetWindowWidth() || pos.y > ofGetWindowHeight())
+			rta = true
+	
+		return rta;
+	}
+
+	bool Pelota::estaViva(){
+		bool rta = true;
+	
+		if (vida <= 0)
+			rta = false;
+	
+		return rta;
+	}
+~~~~
+
+En el testApp.h hace falta agregar un integer llamado tiempo, mientras que en el testApp.cpp:
+
+~~~~{.cpp}
+	void testApp::setup(){
+		ofEnableAlphaBlending();
+		ofSetFrameRate(60);
+	
+		for(int i = 0; i < TOTAL; i++)
+			p[i].pos.set( ofRandom(ofGetWindowWidth()), ofRandom(ofGetWindowHeight()));
+	
+		tiempo = 0;
+	}
+
+
+	void testApp::update(){
+		for(int i = 0; i < TOTAL; i++){
+			p[i].agregarFuerza(ofVec2f(0,0.00098));
+			p[i].agregarNoise(2.7, 0.76);
+			p[i].agregarAlphaFade(false);
+			p[i].agregarScaleFade(false);
+			p[i].update(1);
+	
+	
+			if (p[i].pasoElBorde() || !p[i].estaViva() ){
+				p[i] = Pelota();
+				p[i].color.setHue( (tiempo%3000)*0.1 );
+				p[i].pos.set(mouseX,mouseY);
+			}
+		}
+	
+		tiempo++;
+	}
+
+
+	void testApp::draw(){
+		ofBackground(0);
+	
+		for(int i = 0; i < TOTAL; i++)
+			p[i].draw();
+	}
+~~~~
+
+## 8vo paso: variedad (herencia y polimorfismo)
+
+Unas de las novedades que C++ trajo al mondo de la programación allá a mediados de los ‘80 fue el concepto de programación orientada a objetos. Hasta aquí hemos estado trabajando con el objeto Pelota. Sin embargo, queda muchísimo del potencial de la programación orientada a objetos por descubrir.
+
+Una de sus principales características se denomina herencia. Podemos utilizar la clase Pelota como padre de otras. Estas heredarán todas las variables y funciones públicas que esta tengan.
+
+Por ejemplo:
+~~~~{.cpp}
+
+	#ifndef PELOTITA
+	#define PELOTITA
+
+	#include "ofMain.h"
+	#include “Pelota.h”	// Es importante incorporar el .h a la clase padre
+
+	class Pelotita : public Pelota{
+	public:
+		Pelotita();
+		void draw();
+	};
+
+	#endif
+~~~~
+
+En este caso la clase Pelotita hereda todas las características de Pelota sin embargo podremos definir un estilo propio de modo de dibujarla a esto se denomina polimorfismo . Una cuestión muy útil de todo esto es que en un array de Pelotas podríamos insertar Pelotitas . De tal forma que en un sólo for podríamos itinerar por Pelotas y Pelotitas actualizándolas o dibujándolas a todas.   
+
+
+9no paso: cargando Imágenes
+El último paso de este recorrido tiene que ver con remplazar nuestro humilde círculo coloreado por algo más interesante. Para eso vamos a bajar una imagen ( http://github.com/patriciogonzalezvivo/OF05/blob/master/bin/data/bola.png ) copiarla al directorio bin/data de nuestro proyecto y levantarla desde nuestra App.
+El plan es el siguiente, envez de generar 100 copias, una por cada pelota, vamos a cargar en memoria una sólo de estas imágenes y en cada objeto le vamos a pedir que la “dibuje” en su respectivo color y tamaño.
+Para levantar la imagen tan sólo necesitamos crear una variable ofImage() y cargar el contenido con el método .loadImage(string _archivo)
+A cada objeto vamos a pasarle la dirección en memoria de esta imagen, utilizando el comando & a un la función de cada objeto draw(). Esta va estar esperando un puntero. Osea va a estar mirando hacia el contenido de esa dirección la cual nos pasa. Así va aquedar la función draw de la clase Pelota:
+
+~~~~{.cpp}
+	void Pelota::draw(ofImage* _imagen){ // espera un puntero de tipo ofImage
+		ofSetColor(color, color.a * alphaF );
+		_imagen->draw(	pos.x - _imagen->getWidth() * escalaF, 
+						pos.y - _imagen->getHeight() * escalaF, 
+			   			_imagen->getWidth() * escalaF, 
+			   			_imagen->getHeight() * escalaF);
+	}
+~~~~
+
+Podemos ver que el objeto se comporta como debería, con la única diferencia que en vez de utilizar puntos ( “.” ) estamos usando flechas ( “->” ).  
+
+Desde la testApp.cpp tan sólo debemos:
+
+~~~~{.cpp}
+	void testApp::draw(){
+		ofBackground(0);
+	
+		for(int i = 0; i < TOTAL; i++){
+			p[i].draw(&bola);	// Le pasa la dirección en memoria
+		}
+	}
+~~~~
+
+Punteros es un tema importante en C++ el cual volveremos a explicar con mayor detalle en siguiente tutorial. Hasta entonces recomendamos hecharle una leida a los siguientes links: http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Punteros
+http://es.scribd.com/doc/19125272/POO-Punteros-en-C
+http://elvex.ugr.es/decsai/c/apuntes/punteros.pdf
+
+Tarea:
+- Transformar esta clase en una sub-clase que herede de Pelota 
+- Investigar sobre arrays dinámicos y aplicar el tipo <vector> ( parte la librería estandar de c++ ) a nuestro sistema de partículas.
+http://ronnyml.wordpress.com/2009/07/04/vectores-matrices-y-punteros-en-c/
+http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Biblioteca_Est%C3%A1ndar_de_Plantillas/Vectores
+- Investigar sobre las diferencia entre <vector> y <list>. 
+http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Librer%C3%ADa_Est%C3%A1ndar_de_Plantillas/Listas
