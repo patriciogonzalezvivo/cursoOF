@@ -4,17 +4,11 @@
 
 - [¿Qué es openFrameworks?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_1_Que_es_oF.md)
 
-- [¿Qué es C++?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Que_es_cpp.md)
+- [¿Cómo se instala openFrameworks?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Instalacion.md)
 
-- [Su vínculo con los sistemas *nix](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_3_intro_a_unix.md)
+- [¿Cómo es la estructura de oF?](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_3_estructura_oF.md)
 
-- [¿Cómo se instala openFrameworks?](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_4_Instalacion.md)
-
-- [¿Cómo es la estructura de oF?](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_5_estructura_oF.md)
-
-- [oF para los que vienen de Processing](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_6_desde_processing.md)
-
-- [Introducción al uso de repositorios git](https://github.com/patriciogonzalezvivo/cursoOF/blob/aa9f49f114329907ca66be387135ad51b88b97fa/unidad1/Cap_7_intro_a_git.md)
+- [Introducción al uso de repositorios git](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_4_intro_a_git.md)
 
 
 # Material extra
@@ -33,4 +27,3 @@
 
 [vimeo.com/13159856](http://vimeo.com/13159856)
 
-[![logoFinal](http://www.patriciogonzalezvivo.com/greenTreePie.jpg)](http://www.patriciogonzalezvivo.com)

@@ -31,9 +31,10 @@ Desarrollado por Zach Lieberman, Theodore Watson y Arturo Castro, con la ayuda d
 ## Programa
 
 ### [Unidad nº1: Introducción](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/README.md)
-¿Qué es openFrameworks? ¿Qué es C++? ¿Qué se puede hacer en oF? ¿Cómo se instala?. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). ¿Porque hay “.h” y “.cpp” ? Uso y manejo de repositorios Git.
+¿Qué es openFrameworks? ¿Qué se puede hacer en oF? ¿Cómo se instala?. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). Uso y manejo de repositorios Git.
+
 ### [Unidad nº2: La base dura](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/README.md)
-Breve relato sobre la relación de los sistemas Unix y C. Presentación del lenguaje C++. Breve descripción del proceso de pre-compilación y compilación en C++. Cómo dibujar objetos sencillos en pantalla. Familiarización con el sistema de ejes cartesianos. ¿Qué es una variable? ¿Qué tipos hay? Jugar a mover cosas con el mouse. Cargar imágenes y moverlas. Loopeo, pruebas lógicas, funciones y casteo de variables. 
+Breve relato sobre la relación de los sistemas Unix y C. Presentación del lenguaje C++. Cómo dibujar objetos sencillos en pantalla. Familiarización con el sistema de ejes cartesianos. ¿Qué es una variable? ¿Qué tipos hay? Jugar a mover cosas con el mouse. Cargar imágenes y moverlas. 
 
 ### [Unidad nº3: La belleza y la matemática](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad3/README.md)
 Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
