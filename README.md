@@ -70,8 +70,6 @@ Agregando addons a proyectos. ofxOpenCV, ofxOsc, ofxXmlSettings. [ofxAddons.com]
 
 - [El foro](http://forum.openframeworks.cc/) es probablemente el mejor lugar para obtener respuestas a sus preguntas y entrar en contacto con la enorme comunidad que rodea a OF
 
-- [Base de C++ para usuarios openFrameworks](http://www.doc.gold.ac.uk/~ma501ed/Open%20Frameworks.pdf)
-
 - [Filminas](http://www.roxlu.com/blog/entry/145/openframeworks-007-presentations) hechas por Roxlu para la release 007 del 2011
 
 - [Materiales del curso](https://github.com/obviousjim/OFIntros) que dieron Brett Renfer, James George y Chris Allick

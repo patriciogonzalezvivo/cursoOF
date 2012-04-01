@@ -1,5 +1,5 @@
 
-## 1. Draw Something
+# 1. Dibujando
 Let's start by drawing something. If we want to draw something we have to put it inside the function `void testApp::draw()` in the file ```testApp.cpp```.
  
 Let's start with a graphic version of "Hello World". This draws a blue circle:
@@ -21,7 +21,7 @@ So like with ofBackground, you can use options like `ofSetColor(ofColor:blue);` 
 The next line, `ofFill();` , defines the fill style of the shape (filling the shape with color). The opposite is `ofNoFill();` that will only draw the outline. You can change the size of the outline with `ofSetLineWidth( 4 );`
 Once we set up our background and drawing color we draw a small circle with a radius of 30 pixels at the `100,100` position.
 
-![Image: coordinates.jpg](001_images/coordinates.png)
+![coordinates](http://patriciogonzalezvivo.com/images/tutoriales/coordinates.png)
 
 As you may notice, `x` and `y` coordinates are setup in a way that the `0,0` position it's the top left corner. 
 
@@ -46,7 +46,7 @@ In the documentation of openFrameworks you will notice that all the functions an
 
 CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-style artwork. [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edges and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background.
 
-![Image:kandisky.jpg](001_images/kandinsky.jpg)
+![kandisky](http://patriciogonzalezvivo.com/images/tutoriales/kandinsky.jpg)
  
 
 ## 2. Moving things around
@@ -161,7 +161,7 @@ Ball:
 
 This exactly what a `.h` it's a list of things that makes an object. So let's add two new files to our project ( this depends on the IDE you are using ), one it's going to be a `.h` file call `ball.h` (here we are going to define the elements of our ball) and the other one a `.cpp` call `ball.cpp` ( here we are going to write how these things work together ).
 
-![Image:kandisky.jpg](001_images/newFile.png)
+![newFile](http://patriciogonzalezvivo.com/images/tutoriales/newFile.png)
 
 The `ball.h` file should look like: 
 
