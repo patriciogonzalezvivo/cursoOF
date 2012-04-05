@@ -79,8 +79,6 @@ Agregando addons a proyectos. ofxOpenCV, ofxOsc, ofxXmlSettings. [ofxAddons.com]
 - [Creative Aplications](http://www.creativeapplications.net/)
 
 
-## A cargo de ...
+## Colaboradores
 
-Patricio González Vivo, Licenciado en Psicología, especializado en Terapias Expresivas combinadas. Becas de investigación: “Interactivos 2010” en Espacio Fundación Telefónica y  Taller de producción en el MediaLab del Centro Cultural Español en el 2011.  Docente adjunto de “Conexión Creativa® I y II” en la Facultad de Artes Dramáticas de la Universidad del Salvador (2007-2010). Actualmente se desempeña como Profesor Titular de Programación Aplicada al arte I y II en la carrera de Artes Multimediales del IUNA. Además se desempeña como Psicólogo Clínico y como consultor y desarrollador para distintos estudios y museos nacionales e internacionales. 
-
-[![logoFinal](http://www.patriciogonzalezvivo.com/greenTreePie.jpg)](http://www.patriciogonzalezvivo.com)
+**Patricio González Vivo**, Licenciado en Psicología, especializado en Terapias Expresivas combinadas. Becas de investigación: “Interactivos 2010” en Espacio Fundación Telefónica y  Taller de producción en el MediaLab del Centro Cultural Español en el 2011.  Docente adjunto de “Conexión Creativa® I y II” en la Facultad de Artes Dramáticas de la Universidad del Salvador (2007-2010). Actualmente se desempeña como Profesor Titular de Programación Aplicada al arte I y II en la carrera de Artes Multimediales del IUNA. Además se desempeña como Psicólogo Clínico y como consultor/desarrollador para distintos estudios, institutos y museos. 

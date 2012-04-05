@@ -1,35 +1,70 @@
-# Bases sobre repositorios Git
-##### por Christoph Buchner (en proceso de traducción por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com))
+# epositorio gitHub
+##### por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
-Este tutorial contiene una breve introducción al sistema de control de versiones de repositorios git. Es una buena ida para comenzar a desarrollar código utilizándolo en tus propios proyectos o para interactuar con la comunidad openFrameworks y [github](www.github.com).
-
-Veremos cómo crear un repositorio git, iniciar un proyecto y rastrear los cambios. Además de aprender cómo llevar a cabo las tareas más frecuentes en git.
-
-## ¿Porqué es importante?
-
-El control de versiones es una herramienta que te permite mantener fácilmente la historia, los cambios, y las diferentes variantes de código que escriben.
-Es una mejora incalculable el no tener que guardar copias de seguridad de forma manual a través de comprimir la carpeta de su programa o un mecanismo similar.
+Este tutorial contiene una breve introducción al sistema de control de versiones de repositorios [GIT](http://en.wikipedia.org/wiki/Git_%28software%29). La cual es una herramienta que te permite mantener fácilmente un backup de tu código, junto con la posibilidad de tener distintas versiones, colaboradores y por sobre todo la posibilidad de poder compartirlo fácilmente.
+Es una mejora incalculable para cualquier proyecto.
 
 Además, te permite cooperar con los demás en el código de una manera significativamente más eficaz, por lo que no hay realmente ninguna razón para no hacerlo, sin duda va a hacer tu vida mucho más fácil.
 
-## Información básica sobre Git
 
-[Git](http://en.wikipedia.org/wiki/Git_%28software%29) es el sistema de control de versiones de elección para openFrameworks y github, así que esto es lo que vamos a utilizar.
-Es un sistema de revisión llamado [control distribuido](http://en.wikipedia.org/wiki/Distributed_revision_control), lo que básicamente significa que no es necesario tener un servidor central / repositorio ejecutando para su uso.
+Es una buena idea comenzar a utilizarlo cuanto antes para tus propios proyectos o bien como para colaborar cuanto antes con la comunidad openFrameworks. Como sistema de repositorios remotos utilizaremos [GitHub](www.github.com). Por lo que partiremos por crear una [cuenta gratuita](https://github.com/signup/free).
 
-Si es la primera vez que escuchas sobre git, hay un par de los recursos que debes googlear antes de continuar con este tutorial. Ellos *le enseñará lo básico de cómo usar* git. Después de eso, vamos a tocar algunas de las cosas que surgen cuando estás usando git con OF.
+[GitHub](www.github.com) posee información detallada de los pasos a realizar (es fundamental relacionados con las claves SSH ). Es importante comprender que la gracia del sistema git es que la información no esta centralizada en ninguna parte. Los repositorios gitHub son tan sólo repositorios remotos. Pero pormedio de un cliente local git uno puede gozar de todas las funcionalidades de un sistema de control de versiones, como volver realizar cambios ( **commit** ), subir modificaciones ( **push** ), bajar actualizaciones ( **pull** ), deshacer cambios ( **stash** ), separar una nueva versión ( **branch** ), abrir una nueva rama ( **fork** ), mezclar dos rama ( **merge** ), etc.
 
-[gitref.org](http://gitref.org/) es una referencia concisa de los elementos esenciales de git. Setarda como 30 minutos en leerla, pero vale la pena.
+Como lo hemos realizado en el capítulo anterior todas estas tareas pueden realizarse desde consola (lo cual es muy sencillo en Linux y Mac). Pero también es posible realizarlos con cualquier cliente git que posea una interface gráfica. Estos te ayudarán a mantener tu repositorio **local** con el **remote** (en este caso en gitHub).
+En StackOverflow pueden encontrar los mejores clientes git para cada plataforma [Linux](http://stackoverflow.com/q/2141611/599884), [MacOS](http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x) y [Windows](http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows).
 
-[La página de ayuda github](http://help.github.com/) posee información sobre el uso básico, los conceptos y términos de git y github. Es bueno tener una primera idea acerca de las cosas que normalmente se puede hacer con git.
+Antes de comenzar, sería conveniente que el lector se empapara aún más de las características básica leyendo el siguiente material:
 
-También existe un resumen en [titanPad](http://piratepad.net/ofgitcheatsheet) de comandos frecuentes hecho para la comunidad OF.
+- [gitref.org](http://gitref.org/) es una referencia concisa de los elementos esenciales de git. Setarda como 30 minutos en leerla, pero vale la pena.
+
+- [La página de ayuda github](http://help.github.com/) posee información sobre el uso básico, los conceptos y términos de git y github. Es bueno tener una primera idea acerca de las cosas que normalmente se puede hacer con git.
+
+- También existe un resumen en [titanPad](http://piratepad.net/ofgitcheatsheet) de comandos frecuentes hecho para la comunidad OF.
+
+Perfecto, una vez claros hasta aquí prosigamos viendo cómo crear un repositorio git, iniciar un proyecto y rastrear los cambios. Además de aprender cómo llevar a cabo las tareas más frecuentes en git.
 
 ## Usando Git para proyecto en oF
 
-Si desea utilizar git con sus proyectos, tiene sentido **comenzar tan pronto como sea posible**, idealmente antes de que siquiera empezar a programar.
+Comenzaremos por dirigirnos al al `apps/devApps/projectGenerator/` dentro de nuestro directorio de openFrameworks. Una vez allí abriremos el proyecto con nuestro IDE, lo compilaremos y lo correremos.
 
-A continuación se presentan algunas de las cosas digno de mención, aparte del uso de base, que está cubierto por los vínculos de la sección anterior.
+La primera vez que lo corramos nos preguntará donde se encuentra nuestro directorio de openFrameworks. Nosotros deberemos indicarle el camino hacia el mismo.
+
+Una vez cargado el programa clickearemos donde dice "create project"
+
+![projectGenerator](http://www.patriciogonzalezvivo.com/images/tutoriales/proyectGenerator.png)
+
+Elegimos el directorio donde queremos crearlo y... listo.
+
+![nuevo](http://www.patriciogonzalezvivo.com/images/tutoriales/nuevoProyecto.png)
+
+Si vamos al directorio donde lo creamos veremos que agregó los tres archivos básicos de toda aplicación en OF (`main.cpp`, `testApp.h` y `testApp.cpp`), los directorios `bin` y `bin/data`, junto con un proyecto a medida de nuestro IDE.
+
+Ahora lo que queda es trabajar sobre nuestro proyecto.
+
+Pero antes, crearemos un repositorio remoto en nuestra cuenta [GitHub](www.github.com).
+
+Para eso vamos a nuestra cuenta on-line en [www.github.com](www.github.com) y clickeamos donde dice "New repository".
+
+![nuevoREpo](http://www.patriciogonzalezvivo.com/images/tutoriales/newRepo.png)
+
+Ingresamos los datos del projecto y luego al apretar "Create repository" [GitHub](www.github.com) nos dará una descripción detalada de los pasos a realizar. Los mismos son para ser realizados desde la consola.
+
+Los primeros tienen que ver con el seteo general del cliente git local con los datos de la cuenta en GitHub y sólo deben ser realizados la primera vez. 
+
+![pasos](http://www.patriciogonzalezvivo.com/images/tutoriales/pasosGit.png)
+
+El resto de los mismos tiene que ver con crear un directorio q contenga el proyecto (lo cual no es necesario ya que le ProjectGenerator se ha encargado de ello). Inicializar el git ( `git init` ) lo cual crea el directorio `.git` que contendrá todos los archivos y camibos. Luego crear un archivo README (GitHub abre automáticamente los archivos con ese nombre y muestra el contenido en el navegador, también abre los README.md los cuales tienen un formato llamado markDown del cual es posible aprender más en [aquí](http://github.github.com/github-flavored-markdown/)). Luego agrega ( **add** ) a este archivo al sistema git. Para después realizar lo que se conoce como un **commit**, que vendría a hacer como aceptar que este archivo a cambiado y por lo tanto git debe encargarse de él.
+
+A continuación le dice al cliente git local que exite una repositorio remoto de este proyecto con el cual puede sincronizarse ( `git remote add origin …. `) 
+
+Finalmente realiza un **push** de la información, que en otras palabras significa sube los cambios al repositorio remoto. 
+
+Todo esto parece largo y complicado. Tienen reazón!!
+
+Es por eso que a partir de este punto conviene usar un cliente con una buena GUI. Por lo general una vez creado el proyecto, inicializado y configurado el repositorio remoto es posible dragear la carpeta a nuestro cliente Git preferido y automáticamente el se encargará de todo. Veremos que sólo verá que archivos hace falta subir y actualizar. Para cada vez que halla que subir los cambios pedirá que se le otorge un texto explicativo para el commit. 
+
+Es vital realizar la mayor cantidad de commit q sea posible todo el tiempo que sea posible con el mejor grado de detalle y síntesis que sea posible en su descripción. Esta buena práctica lo transformará en un colaborador valorado en su comunidad. 
 
 	
 ### Ignorando archivos
@@ -45,26 +80,17 @@ Tenga en cuenta que los archivos que ya forman parte del depósito no se tienen 
 Además, una vez que los archivos se añaden al repositorio, se convierten en parte de la historia y estarán allí para quedarse. De esta manera, es muy fácil de aumentar innecesariamente el tamaño de su repositorio, porque no hay manera fácil de purgar los archivos añadidos por error desde el repositorio (especialmente si usted ha llevado ya a su repositorio en línea).
 Por estas razones, es **muy importante** estar atentos al añadir archivos a su repositorio.
 
-### Git GUIs
-Si no desea utilizar la línea de comandos, hay un número de clientes git visuales por ahí que puede utilizar.
-StackOverflow tiene una buena colección de los candidatos para [Linux](http://stackoverflow.com/q/2141611/599884), [MacOS](http://stackoverflow.com/questions/455698/best-visual-client-for-git-on-mac-os-x) y [Windows](http://stackoverflow.com/questions/157476/what-guis-exist-for-git-on-windows).
+
 
 ### Repositorios remotos: origin y upstream
 [Remotes](http://gitref.org/remotes/) son los identificadores de los repositorios remotos con los que probablemente quieras interactuar.
 Hacen que sea fácil acceder a los repositorios sin tener que escribir las direcciones URL en todo momento.
-Es costumbre nombrar a la copia de tu propio repositorio (por ejemplo, en github) como `origin` . Esto se hace automáticamente cuando escribes `git clone` a un repositorio de GitHub.
-Por otro lado, si el repositorio es un fork de otro repositorio, por ejemplo, si usted tiene su propia copia de la OF, ese repositorio normalmente se le llama `usptream`.
+Es costumbre nombrar a la copia de tu propio repositorio (por ejemplo, en github) como `origin` (como acabamos de realizar al seguir los pasos detallados en por github). Al mismo tiempo cada vez que uno realiza un `git clone` a un repositorio de GitHub (como hicimos cuando bajamos la versión de openFrameworks desde el repositiorio github) este también queda como origin.
+Por otro lado, si el repositorio es un fork de otro repositorio, por ejemplo, o sea en el caso que tengas tu propia copia de otro repositorio (por ejemplo tu propia copia de OF), ese repositorio normalmente se le llama `usptream`.
 
-### Git para los que vienen de SVN
-Si haz usado SVN, y queres pasar a git, las cosas pueden ser confusas. Hay algunos recursos en la web, un tutorial que explica los comandos equivalentes que se puede encontrar [aquí](http://git.or.cz/course/svn.html).
-Una cosa a tener en cuenta es que un `commit` es mucho menos grave en git, ya que permanecerá en su repositorio local. En git la clave es  **"commit early, commit often"**.
 
-Otra distinción es que tener tu propio repositorio es mucho más independiente de un repositorio central.
-
-Además, la fusión (merging) y la ramificación (branching) son las cosas que son fundamentales para la forma git trabaja, a fin de utilizarlo libremente.
-
-### Empujando nuevas versiones (Pushingnew branches) a Github
-Si usted tiene un trabajo nuevo en una rama separada, y que desea llevar este a su repositorio github, usted dice
+### Push-eando nuevas versiones a Github
+Si tenés un trabajo nuevo en una **branch** separado y deseas subirlo a tu repositorio git. La cadena de comandos sería:
 
 ```
 	git push origin new-work
@@ -72,14 +98,14 @@ Si usted tiene un trabajo nuevo en una rama separada, y que desea llevar este a 
 	
 ### Crear una copia local de un branch en un repositorio remoto 
 
-Si quieres echa un vistazo a la rama de un repositorio, que todavía no existe en el repositorio local, se utiliza
+Si quieres echa un vistazo al **branch** de un repositorio, que todavía no existe en el repositorio local, se utiliza
 
 ```
 	git fetch origin
 	git checkout --track origin/interesting-branch
 ```
 
-El segundo comando crea una sucursal local llamado `interesting-branch` que coincide con el origen de `origin/interesting-branch` le dice a Git que desea ser capaz de subir (push) con facilidad y sacar de la rama (branch) en el control remoto.
+El segundo comando crea una sucursal local llamada `interesting-branch` que coincide con el origen de `origin/interesting-branch`. Esto le dice a Git que deseas ser capaz de subir ( **push** ) con facilidad y sacar de la misma rama ( **branch** ) en el remoto.
 
 ### Borrando ramas (branches) en el repo remoto 
 Si usted ha trabajado en alguna rama, por ejemplo, para una solicitud de extracción para obtener algunas correcciones de errores en el OF, y usted no necesita esta rama más, por ejemplo, si el PR se ha fusionado ya, continuación, puede eliminar la rama en el control remoto diciendo
@@ -115,6 +141,14 @@ So, in the present case, you would do
 	git pull upstream develop
 	git stash pop
 	<continue work>
+
+### Git para los que vienen de SVN
+Si haz usado SVN, y queres pasar a git, las cosas pueden ser confusas. Hay algunos recursos en la web, un tutorial que explica los comandos equivalentes que se puede encontrar [aquí](http://git.or.cz/course/svn.html).
+Una cosa a tener en cuenta es que un `commit` es mucho menos grave en git, ya que permanecerá en su repositorio local. En git la clave es  **"commit early, commit often"**.
+
+Otra distinción es que tener tu propio repositorio es mucho más independiente de un repositorio central.
+
+Además, la fusión (merging) y la ramificación (branching) son las cosas que son fundamentales para la forma git trabaja, a fin de utilizarlo libremente.
 
 ## More git resources:
 
