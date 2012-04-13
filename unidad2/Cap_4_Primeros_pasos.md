@@ -2,7 +2,7 @@
 ### una aproximación “divertida” a clases y herencias en C++
 ##### por Patricio González Vivo
 
-## Introducción 
+## Introducción 
 
 Este archivo da por sentado que se han leído los anteriores, se ha instalado satisfactoriamente openFrameworks, creado los proyectos y compilado el core de librerías. A su vez también se recomienda que antes de arrancar se halla compilado los proyectos de ejemplo que se pueden encontrar en el apps/examples y apps/addonsExamples.
 
