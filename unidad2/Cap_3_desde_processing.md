@@ -5,7 +5,7 @@ Si vienes de programar en entorno Processing seguramente habrás usado con anter
 
 What is class extendisng? (base and sub classes)?
 
-Extender una clase es un metodo que permite agregar funcionalidades a una clase que ya existe. Esto es muy cómodo si por ejemplo tenemos varios objetos que son casi comunes en su base, pero con alguna diferencia entre ellos. Algo que me ha ayudado a comprender esto, es pensar que la clase base es como un padre/o madre y la nueva es un hijo que viene de serie con todas las características del padre pero con la posibilidad de tener alguna propia y así mejorar o cambiar al padre. class Hijo extends Padre 
+Extender una clase es un método que permite agregar funcionalidades a una clase que ya existe. Esto es muy cómodo si por ejemplo tenemos varios objetos que son casi comunes en su base, pero con alguna diferencia entre ellos. Algo que me ha ayudado a comprender esto, es pensar que la clase base es como un padre/o madre y la nueva es un hijo que viene de serie con todas las características del padre pero con la posibilidad de tener alguna propia y así mejorar o cambiar al padre. class Hijo extends Padre 
 
 Por ejemplo, para un videojuego necesitaremos crear una clase que defina al enemigo.
 
@@ -36,9 +36,9 @@ Con esto tendriamos creada la estructura básica de nuestro enemigo, la cual tie
 
 - `draw()` representa nuestro personaje en la pantalla
 
-El siguiente paso sería, por ejemplo, crear enemigos que aparezcan de modo diferente, lo primero que puedes pensar es: facil, hago varias clases iguales y les cambio lo que necesite, asi puedo tener varios enemigos tomando este básico que ya he creado. Eso seria la manera errónea de hacerlo: terminariamos con multitud de archivos y seria muy engorroso por no decir de locos el mantener el código.
+El siguiente paso sería, por ejemplo, crear enemigos que aparezcan de modo diferente, lo primero que puedes pensar es: fácil, hago varias clases iguales y les cambio lo que necesite, asi puedo tener varios enemigos tomando este básico que ya he creado. Eso seria la manera errónea de hacerlo: terminariamos con multitud de archivos y seria muy engorroso por no decir de locos el mantener el código.
 
-Ahora es donde necesitamos usar el concepto de extender una clase, porque para crear nuestros enemigos, solo necesitamos cambiar uno de los metodos de la clase base (Enemy), el resto de funcionalidades y propiedades son las mismas.
+Ahora es donde necesitamos usar el concepto de extender una clase, porque para crear nuestros enemigos, solo necesitamos cambiar uno de los métodos de la clase base (Enemy), el resto de funcionalidades y propiedades son las mismas.
 
 Necesitamos crear una clase para cada tipo de enemigo que extienda la que define el enemigo “base”, en Processing sería algo así.
 
@@ -71,11 +71,11 @@ Y en c++
 	}; // note the ";" at the end of the class statement
 ```
 
-Esta clase nueva hereda los metodos `init()` y `move()` de la clase Enemy. Si modificamos el metodo init o move de la clase base (Enemy) esos cambios se aplicaran instantanemente a todas las clases que extiendan a esta.
+Esta clase nueva hereda los métodos `init()` y `move()` de la clase Enemy. Si modificamos el método init o move de la clase base (Enemy) esos cambios se aplicarán instantanemente a todas las clases que extiendan a esta.
 
-Processing es en realidad es un framework para Java. Aunque no lo veamos, cada vez que creamos un sketch o una clase dentro de processing realmente lo que estamos haciendo es una clase que se extiende automaticamente sobre la clase base pApplet para poder usar todos los metodos o propiedades de esa clase base en nuestro nuevo código.
+Processing es en realidad es un framework para Java. Aunque no lo veamos, cada vez que creamos un sketch o una clase dentro de processing realmente lo que estamos haciendo es una clase que se extiende automáticamente sobre la clase base pApplet para poder usar todos los métodos o propiedades de esa clase base en nuestro nuevo código.
 
-De ese modo cuando estamos escribiendo los metodos `setup()` o `draw()` realmente estamos redefiniendo los metodos que se encuentran en la clase base.
+De ese modo cuando estamos escribiendo los métodos `setup()` o `draw()` realmente estamos redefiniendo los métodos que se encuentran en la clase base.
 
 OpenFrameworks funciona de una manera similar a Processing. Si abres el archivo `testApp.h` y buscas la línea donde pone `#include “ofMain.h”` veras que debajo tenemos otra linea donde se declara la clase TestApp.
 
@@ -84,17 +84,17 @@ OpenFrameworks funciona de una manera similar a Processing. Si abres el archivo 
 	class TestApp: public ofSimpleApp{
 
 ```
-Como ya hemos visto con anteroridad esta es la equivalencia a lo que seria en Processing
+Como ya hemos visto con anterioridad esta es la equivalencia a lo que sería en Processing
 
 ```java
 	class TestApp extends ofSimpleApp{
 ```
 
-Lo que significa que la clase que estamos creando `TestApp` extiende a `ofSimpleApp` con lo cual esta nueva clase hereda todos los metodos de la clase base `ofSimpleApp`.
+Lo que significa que la clase que estamos creando `TestApp` extiende a `ofSimpleApp` con lo cual esta nueva clase hereda todos los métodos de la clase base `ofSimpleApp`.
 
-Justo después de la linea que define nuestra clase encontramos bajo el termino “public:” encontramos un conjunto de metodos que provienen de esa clase base (ofSimpleApp) y que se encuentran como publicos en nuestra clase para poder ser re-escritos. Es el mismo funcionamiento que en Processing.
+Justo después de la línea que define nuestra clase encontramos bajo el término “public:” encontramos un conjunto de métodos que provienen de esa clase base (ofSimpleApp) y que se encuentran como públicos en nuestra clase para poder ser re-escritos. Es el mismo funcionamiento que en Processing.
 
-Todas las aplicaciones que creemos en c++ precisan de un metodo `main()` que define el punto de inicio del programa, en Java ocurre lo mismo, solo que Processing lo hace por y no necesitamos declarar ese metodo porque el compilador lo hace automaticamente por nosotros.
+Todas las aplicaciones que creemos en c++ precisan de un método `main()` que define el punto de inicio del programa, en Java ocurre lo mismo, solo que Processing lo hace por y no necesitamos declarar ese método porque el compilador lo hace automáticamente por nosotros.
 
 Si abres cualquier ejemplo que viene con OF verás que en todos hay un archivo llamado `main.cpp` en las primeras líneas de este archivo puedes ver varios `#include` (este comando funciona de igual modo que en Processing). Vamos a ir analizando cada uno de ellos.
 
@@ -107,7 +107,7 @@ vincula la libreria de OpenFrameworks a la clase (`main.cpp`) y le permite eejcu
 `ofSetupOpenGL()` el cual crea la ventana donde se mostrará nuestra aplicacion
 `ofRunApp()`  llama a nuestra aplicacion
 
-Si nos fijamos en el metodo `ofRunApp()` veremos que pasa un parametro el cual es una instancia para crear el objeto de nuestra aplicacion “testApp”.
+Si nos fijamos en el método `ofRunApp()` veremos que pasa un parámetro el cual es una instancia para crear el objeto de nuestra aplicacion “testApp”.
 	`ofRunApp(new testApp());`
 
 Para poder crear esta instancia de la clase testApp debemos de incluir en este archivo un `#include` al archivo de cabecera de dicha clase, así que necesitamos poner al principio
@@ -135,22 +135,22 @@ Estamos importando a nuestro archivo `main.cpp` los archivos de cabecera de las 
 	}
 ```
 
-`ofSetupOpenGL()` y `ofRunApp()` son metodos de la clase ofMain
+`ofSetupOpenGL()` y `ofRunApp()` son métodos de la clase ofMain
 window es una instancia de la clase ofAppGlutWindow
 
 Hasta que no empieces a crear tus propias clases igual te ayuda a comprender mejor el concepto de funcionamiento el pensar en la clase testApp como la ventana principal de Processing.
 
-El proceso de compilado en C++ tiene grandes diferencias con respecto a Java, es importante conocer como ese ese proceso de compilado porque a posteriori nos facilitara la depuración de errores. Saber en que parte del compilado se produce el error nos ayudará enormemente a encontrar el fallo y poder solucionarlo.
+El proceso de compilado en C++ tiene grandes diferencias con respecto a Java, es importante conocer como ese ese proceso de compilado porque a posteriori nos facilitará la depuración de errores. Saber en que parte del compilado se produce el error nos ayudará enormemente a encontrar el fallo y poder solucionarlo.
 
 En Java cada vez que compilamos todo el código es transformado a byte code, luego al ejecutarlo un interprete de Java lo procesa y posteriormente ejecuta.
 
-En C++ el proceso de compilado difiere un poco de Java y pasaria por las siguientes fases:
+En C++ el proceso de compilado difiere un poco de Java y pasaría por las siguientes fases:
 
 - Paso 1: Preprocesado: el compilador lee todo, busca las instrucciones `#import` y por cada uno de ellos toma el archivo que se indica en el `import` y lo agrega al nuestro, creando una especie de superarchivo temporal donde esta todo el código junto. En este preprocesado se emplean todos lo comandos que van precedidos por un #
 
-- Paso 2: el compilador parsea el còdigo para buscar incoherencias o errores en el mismo y lo trocea para proceder al tercer paso y transformarlo a Assembly
+- Paso 2: el compilador parsea el código para buscar incoherencias o errores en el mismo y lo trocea para proceder al tercer paso y transformarlo a Assembly
 
-- Paso 3: el código Assembly es trasladado a còdigo maquina creando objetos
+- Paso 3: el código Assembly es trasladado a còdigo máquina creando objetos
 
 - Paso 4: se juntan todos los objetos para crear el archivo ejecutable (.exe o .app)
 
@@ -166,13 +166,13 @@ Definiciones de varibles locales de esa clase
 Prototipo de cada uno de los metodos de la clase
 Los ajustes de seguridad para cada una de esos metodos y variables (public,private,priotected,...)
 
-Y el archivo (.cpp) serian las instrucciones de nuestra receta, la cual tendría:
+Y el archivo (.cpp) serían las instrucciones de nuestra receta, la cual tendría:
 Todos los includes necesarios a los archivos de cabecera de cada clase
-El codigo de cada uno de los métodos
+El código de cada uno de los métodos
 
-Puedes comprobar esto habriendo cualquiera de los archivos testApp.h y testApp.cpp que se encuentran en cada uno de los ejemplos que vienen con OF
+Puedes comprobar esto abriendo cualquiera de los archivos testApp.h y testApp.cpp que se encuentran en cada uno de los ejemplos que vienen con OF
 
-Todo el código que contenido en testApp.h esta agrupado dentro de un metodo condicional llamado `#ifndef`. Este método esta creado específicamente para que se ejecute en la parte  del compilado que corresponde al preprocesado. Recordemos que en esta fase, el compilador recorre todo el codigo juntando todos los includes en un mismo archivo.
+Todo el código que contenido en testApp.h esta agrupado dentro de un método condicional llamado `#ifndef`. Este método esta creado específicamente para que se ejecute en la parte  del compilado que corresponde al preprocesado. Recordemos que en esta fase, el compilador recorre todo el codigo juntando todos los includes en un mismo archivo.
 
 Si has importado el mismo archivo de cabecera (.h) en distintos sitios, puede ser un problema porque habria instrucciones duplicadas. 
 
@@ -181,7 +181,7 @@ Si has importado el mismo archivo de cabecera (.h) en distintos sitios, puede se
 	#define _TEST_APP 
 ```
 
-El comando #ifndef le esta diciendo al compilador que compruebe si la variable _TEST_APP esta definida, esta variable sera definida la primera vez que se ejecute el código y si posteriormente el compilador se vuelve a encontrar con esta instrucción, al ver que la variable ya ha sido creada ya no agregara el codigo de ese archivo y así no tendremos duplicados.
+El comando #ifndef le esta diciendo al compilador que compruebe si la variable _TEST_APP esta definida, esta variable será definida la primera vez que se ejecute el código y si posteriormente el compilador se vuelve a encontrar con esta instrucción, al ver que la variable ya ha sido creada ya no agregara el código de ese archivo y así no tendremos duplicados.
 
 Es una buena costumbre aplicar esto a todas las clases que creemos (claro esta usando nombres de variables distintos para cada clase)
 
@@ -328,9 +328,9 @@ test:
 // test.num
 
 
-Entonces, cuando test es pasado a través del metodo addOne() estamos pasando la direccion de la memoria(52498) donde esta almacenado test, por eso la variable num no se varia ni se copia.
+Entonces, cuando test es pasado a través del metodo addOne() estamos pasando la direccion de la memoria(52498) donde esta almacenado test, por eso la variable num no se varía ni se copia.
 
-Java hace esto porque si se pasara el objeto entero continuamente, se ralentizaria todo enormemente. Los valores basicos son suficientemente pequeños para ser pasados por su valor pero cualquier otro valor es transferido por referencia.
+Java hace esto porque si se pasara el objeto entero continuamente, se ralentizaría todo enormemente. Los valores basicos son suficientemente pequeños para ser pasados por su valor pero cualquier otro valor es transferido por referencia.
 
 So when test is passed through addOne(), really just 52498, or whatever the actual memory address of test's data is passed. Because of that, when test's num is incremented, it is actually changed. No copy is ever made.
 Java does this because if it were to pass entire objects around constantly everything would slow to a crawl. The basic data-types are small enough to get passed by value, but everything else is passed by reference.
@@ -338,11 +338,11 @@ Java does this because if it were to pass entire objects around constantly every
 
 C++ se diferencia de Java en que hay que declarar el estado en el cual estamos pasando algo, ya sea por valor o por referencia. You can also define when a variable will behave as if it contains actual data and when a variable will only contain a pointer to data. You can even make an int that behaves like the Test class did above. This is all done with the & (referencing) and * (dereferencing) symbols.
 
-El valor & es usado para adquirir la direccion de la memoria donde se almacena una variable, por ejemplo:
+El valor & es usado para adquirir la dirección de la memoria donde se almacena una variable, por ejemplo:
 b=1;
 a=&b;
 
-significa que a es igual o apunta a la direccion de la memoria donde esta almacenada b, no su valor, por lo que a++; va a adquirir el siguiente hueco libre en la memoria despues de b. Pero si hacemos *a++; estamos incrementando el valor almacenado en a, y por consiguiente ahora tanto a como b tienen el valor de 2
+significa que a es igual o apunta a la dirección de la memoria donde está almacenada b, no su valor, por lo que a++; va a adquirir el siguiente hueco libre en la memoria despues de b. Pero si hacemos *a++; estamos incrementando el valor almacenado en a, y por consiguiente ahora tanto a como b tienen el valor de 2
 
 
 C++ differs from Java in that you need to explicitly state whether you are passing something by value or by reference. You can also define when a variable will behave as if it contains actual data and when a variable will only contain a pointer to data. You can even make an int that behaves like the Test class did above. This is all done with the & (referencing) and * (dereferencing) symbols.
@@ -380,8 +380,8 @@ ptr = &x;
 
 So Where Do I use This?
 
-En principio usaras punteros para pasar arrays. Un ejemplo de esto, puede verse en el ejemplo movieGrabberExample donde se usa un punterio para acceder a los pixeles del objeto videograbber ( insigned char* videoInverted;)
-Funciona porque en c++ cuando nos referimos a un array sin [] estamos haciendo referencia a una direccion en la memoria, el simbolo [] funciona como * que son operadores de dereferencing
+En principio usarás punteros para pasar arrays. Un ejemplo de esto, puede verse en el ejemplo movieGrabberExample donde se usa un punterio para acceder a los pixeles del objeto videograbber ( insigned char* videoInverted;)
+Funciona porque en c++ cuando nos referimos a un array sin [] estamos haciendo referencia a una dirección en la memoria, el simbolo [] funciona como * que son operadores de dereferencing
 At runtime, your processor multiplies the number inside of the []'s (your index) by the number of bytes your data-type takes up in memory to figure out how far it must jump in memory to reach that index of your array.
 So to pass an array in C++ you must pass it without the []'s, and the receiving function must be aware it is receiving a pointer:
 [functionName] ( [variable type] * [varName]){
@@ -403,7 +403,7 @@ Basic Data-types
 
 Java y C++ comparten los tipos de variables mas sencillos: byte, short, int, long, float, double y char. (Boolean existe tambien en c++ y funciona del mismo modo que en Processing solo que se indica como bool )
 
-Si embargo C++ tiene mas tipos de datos que son unsigned: unsigned byte, unsigned short, unsigned int, unsigned long, unsigned float, unsigned double, unsigned char. Unsigned significa que en vez de tener valores positivos y negativos (ejemplo: char puede tener cualquier valor comprendido entre -128 y 127), estas variables no tiene signo  (ejemplo: unsigned char puede tener cualquier valor comprendido entre 0 y 255)
+Sin embargo C++ tiene más tipos de datos que son unsigned: unsigned byte, unsigned short, unsigned int, unsigned long, unsigned float, unsigned double, unsigned char. Unsigned significa que en vez de tener valores positivos y negativos (ejemplo: char puede tener cualquier valor comprendido entre -128 y 127), estas variables no tiene signo  (ejemplo: unsigned char puede tener cualquier valor comprendido entre 0 y 255)
 
 Java and C++ share most basic data-types:
 byte, short, int, long, float, double, and char. (Boolean is also in C++, and works the same way as it does in processing except it is called 'bool').
