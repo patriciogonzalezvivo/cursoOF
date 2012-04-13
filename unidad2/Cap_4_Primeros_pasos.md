@@ -1,11 +1,10 @@
-
-# Mi primer sistema de particulas 
+# Mi primer sistema de partículas 
 ### una aproximación “divertida” a clases y herencias en C++
 ##### por Patricio González Vivo
 
 ##Introducción 
 
-Este archivo da por sentado que se han leído los anteriores, se ha instalado satisfactoriamente openFrameworks, creado los proyectos y compilado el core de librerías. A su vez también se recomienda que antes de arrancar se halla compilado los proyectos de ejemplo que se pueden encontrar en el apps/examples y apps/addonsExamples .
+Este archivo da por sentado que se han leído los anteriores, se ha instalado satisfactoriamente openFrameworks, creado los proyectos y compilado el core de librerías. A su vez también se recomienda que antes de arrancar se halla compilado los proyectos de ejemplo que se pueden encontrar en el apps/examples y apps/addonsExamples.
 
 También damos por sentado que se ha aprendido a compilar en cada plataforma utilizando correctamente el IDE correspondiente.
 
@@ -38,11 +37,11 @@ Aquí sólo estamos dibujando es: primero el fondo ( ofBackground(int) ) y luego
 
 Si quisiéramos dibujar un rectángulo la función que necesitaríamos sería ofRect(x,y,width,height).
 
-Jugando con los valores x e y podemos comprender rápidamente cuales son los valores 0,0 en pantalla. Al mismo tiempo que modificando los valores de color en ofSetColor y ofBackground podemos comprender las diferentes formas de declarar un color de acuerdo a la luminancia monocromática o en cada canal.
+Jugando con los valores x e y podemos comprender rápidamente cuáles son los valores 0,0 en pantalla. Al mismo tiempo que modificando los valores de color en ofSetColor y ofBackground podemos comprender las diferentes formas de declarar un color de acuerdo a la luminancia monocromática o en cada canal.
 
 Al mismo tiempo podemos explorar el uso de los métodos de ofFill() y ofNoFill() los cuales establecen si las figuras se dibujarán rellenas o tan sólo el borde de las mismas.
 
-Otros valores para cambiar es el ancho de la linea: ofSetLineWidth( float ancho )
+Otros valores para cambiar es el ancho de la línea: ofSetLineWidth( float ancho )
 ## 2do paso: moverlo
 
 Para agregarle un poco de movimiento podemos dibujar en cada itineración el mismo círculo en la posición donde se encuentra el mouse. Esto se realiza con dos variables propias del ofBaseApp que poseen la posición en X ( mouseX )y en Y ( mouseY ) del mouse.
@@ -100,7 +99,7 @@ En el testApp.cpp:
 	#include "testApp.h"
 
 	void testApp::setup(){
-		x = ofGetWindowWidth()/2; 	// El circulo comienza en el centro
+		x = ofGetWindowWidth()/2; 	// El círculo comienza en el centro
 		y = ofGetWindowHeight()/2;	// de la ventana
 	}
 
@@ -133,7 +132,7 @@ Comencemos con Pelota.h
 	#ifndef PELOTA	// recordemos que esto previene declarar la misma clase
 	#define	PELOTA	// dos veces
 
-	#include "ofMain.h"	// Aqui agregamos los metodos y clases de oF
+	#include "ofMain.h"	// Aqui agregamos los métodos y clases de oF
 
 	class Pelota {
 	public:			// Todos los métodos aquí son públicos por los que cualquiera puede
@@ -152,7 +151,7 @@ Comencemos con Pelota.h
 En el Pelota.cpp:
 
 ~~~~{.cpp}
-	#include "Pelota.h"		// Referencia al header donde los siguientes métodos estan 
+	#include "Pelota.h"		// Referencia al header donde los siguientes métodos están 
 							//declarados
 	Pelota::Pelota(){
 		x = ofGetWindowWidth()/2;
@@ -220,9 +219,9 @@ En el el testApp.cpp tan sólo debe escribirse:
 ## 4to paso: aplicarle cierta física
 
 Desde la versión 007 oF cuenta con clases para realizar cálculos vectoriales (de dos, tres o cuatro dimensiones) de forma sencilla. Hechándole una mirada al directorio openFrameworks/libs/openframeworks/math podemos encontrar que también existen clases nativas para realizar calculos de matrices y quaterniones.
-En este paso vamos a hacer uso de esas clases reemplazando los int x e y por un vector de dos dimensiones con valores de punto flotante ( numero con coma ) que guarde la posición de nuestro objeto, para eso nos vamos a valer de la clase ofVec2f() definida en ofVec2f.h
+En este paso vamos a hacer uso de esas clases reemplazando los int x e y por un vector de dos dimensiones con valores de punto flotante ( número con coma ) que guarde la posición de nuestro objeto, para eso nos vamos a valer de la clase ofVec2f() definida en ofVec2f.h
 Además agregaremos dos vectores más para calcular la aceleración y la velocidad.
-Así mismo crearemos dos variables más. Una contendrá el tamaño del objeto, mientras que la última será una variable de tipo ofColor() para contener el color del mismo. Este tipo de variables nos permite realizar operaciones de color a la vez que converciones. Vale la pena hecharle una mirada a libs/openFrameworks/types/ofColor.h para comprender cómo se las declara y cuantas funciones útiles posee.
+Así mismo crearemos dos variables más. Una contendrá el tamaño del objeto, mientras que la última será una variable de tipo ofColor() para contener el color del mismo. Este tipo de variables nos permite realizar operaciones de color a la vez que converciones. Vale la pena echarle una mirada a libs/openFrameworks/types/ofColor.h para comprender cómo se las declara y cuántas funciones útiles posee.
 
 En la rutina de update haremos que la aceleración actualice la velocidad. La cual dependerá de la resistencia o densidad del espacio, la cual moverá la posición del objeto. 
 
@@ -303,7 +302,7 @@ Mientras que en el testApp.cpp ahora actualizamos la posición de la siguiente m
 Al compilar podemos ver como la pelota es atraída por el cursor. Sin embargo esto dista mucho a comportarse como una pelota.
 ## 5to paso: un poco de onda
 
-Como parte de algunas funciones matemáticas incorporadas al framework podemos agregarle valores random para hacer las cosas un poco más interesante. Para esto a la hora de inicializar utilizaremos la clase ofRandom de dos maneras. Un con un sólo parámetro explicitando el máximo y otra por medio de dos especificando el minimo y máximo de los valores random que devuelva.
+Como parte de algunas funciones matemáticas incorporadas al framework podemos agregarle valores random para hacer las cosas un poco más interesante. Para esto a la hora de inicializar utilizaremos la clase ofRandom de dos maneras. Un con un sólo parámetro explicitando el máximo y otra por medio de dos especificando el mínimo y máximo de los valores random que devuelva.
 Para este ejemplo le agregaremos una función más a nuestra clase Pelota para saber cuando ha salido de la pantalla de tal forma que podamos volverla a crear. También dejaremos que las pelotas caigan por gravedad.
 
 Pelota.h:
@@ -395,7 +394,7 @@ En el testApp.h:
 	#include "ofMain.h"
 	#include "Pelota.h"
 
-	#define TOTAL 100		// Esta bueno explorar hasta que numero puede llegar
+	#define TOTAL 100		// Esta bueno explorar hasta que número puede llegar
 
 	class testApp : public ofBaseApp{
 	public:
@@ -637,9 +636,9 @@ En este caso la clase Pelotita hereda todas las características de Pelota sin e
 
 9no paso: cargando Imágenes
 El último paso de este recorrido tiene que ver con remplazar nuestro humilde círculo coloreado por algo más interesante. Para eso vamos a bajar una imagen ( http://github.com/patriciogonzalezvivo/OF05/blob/master/bin/data/bola.png ) copiarla al directorio bin/data de nuestro proyecto y levantarla desde nuestra App.
-El plan es el siguiente, envez de generar 100 copias, una por cada pelota, vamos a cargar en memoria una sólo de estas imágenes y en cada objeto le vamos a pedir que la “dibuje” en su respectivo color y tamaño.
+El plan es el siguiente, en vez de generar 100 copias, una por cada pelota, vamos a cargar en memoria una sólo de estas imágenes y en cada objeto le vamos a pedir que la “dibuje” en su respectivo color y tamaño.
 Para levantar la imagen tan sólo necesitamos crear una variable ofImage() y cargar el contenido con el método .loadImage(string _archivo)
-A cada objeto vamos a pasarle la dirección en memoria de esta imagen, utilizando el comando & a un la función de cada objeto draw(). Esta va estar esperando un puntero. Osea va a estar mirando hacia el contenido de esa dirección la cual nos pasa. Así va aquedar la función draw de la clase Pelota:
+A cada objeto vamos a pasarle la dirección en memoria de esta imagen, utilizando el comando & a un la función de cada objeto draw(). Esta va estar esperando un puntero. Osea va a estar mirando hacia el contenido de esa dirección la cual nos pasa. Así va a quedar la función draw de la clase Pelota:
 
 ~~~~{.cpp}
 	void Pelota::draw(ofImage* _imagen){ // espera un puntero de tipo ofImage
@@ -665,7 +664,7 @@ Desde la testApp.cpp tan sólo debemos:
 	}
 ~~~~
 
-Punteros es un tema importante en C++ el cual volveremos a explicar con mayor detalle en siguiente tutorial. Hasta entonces recomendamos hecharle una leida a los siguientes links: http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Punteros
+Punteros es un tema importante en C++ el cual volveremos a explicar con mayor detalle en siguiente tutorial. Hasta entonces recomendamos echarle una leida a los siguientes links: http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Punteros
 http://es.scribd.com/doc/19125272/POO-Punteros-en-C
 http://elvex.ugr.es/decsai/c/apuntes/punteros.pdf
 
