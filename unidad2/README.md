@@ -17,6 +17,8 @@ Material extra:
 - “El lenguaje de programación C”, Briean W. Kernigahn & Dennis M. Ritchie, Pearson Education (1991)
 
 - [Base de C++ para usuarios openFrameworks](http://www.doc.gold.ac.uk/~ma501ed/Open%20Frameworks.pdf)
+
+- [C++ FAQ](http://www.parashift.com/c++-faq-lite/)
 - “Enciclopedia del Lenguaje C++”, Javier Ceballos Sierra, Alfaomega (2009)
 
 - Standford, [“Programming Paradigms” by Jerri Cain](http://itunes.apple.com/us/itunes-u/programming-paradigms/id384233005)
