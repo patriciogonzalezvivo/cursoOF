@@ -1,9 +1,10 @@
 # Un "Hola Mundo" visual
-##### por Patricio González Vivo
+##### por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
 ## Introducción 
 
-Este archivo da por sentado que se han leído los anteriores, se ha instalado satisfactoriamente openFrameworks, creado los proyectos. A su vez también se recomienda que antes de arrancar se hallan compilado los proyectos de ejemplo.
+Este tutorial da por sentado que se han leído los anteriores, que se ha instalado satisfactoriamente openFrameworks, han creado los proyectos de los ejemplos, compilados y jugado un poco. 
+Si bien es un recorrido bastante sencillo, es mejor que el lector cuente con algunos conocimientos previos de programación básicos como: qué es una variable? una función? un bucle o loop `for`, una pregunta `if`, etc. 
 
 ## Arranquemos por dibujar algo 
 
