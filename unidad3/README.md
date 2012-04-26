@@ -2,10 +2,10 @@
 
 # Unidad nº3: La belleza y la matemática
 
-- Capítulo 1: 
+- [Capítulo 1](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad3/Cap_1_Me%CC%81todos_y_objetos_%20de_oF.md): 
 Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. 
 
-- Capítulo 2: Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
+- [Capítulo 2](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad3/Cap_2_Aprendiendo%20POO%20por%20medio%20de%20sistema_de_particulas.md): Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
 
 
 Material extra:
