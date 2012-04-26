@@ -1,7 +1,11 @@
 [![logo](http://www.patriciogonzalezvivo.com/images/tutoriales/oF-workshop.jpg)](http://www.patriciogonzalezvivo.com)
 
 # Unidad nº3: La belleza y la matemática
-Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
+
+- Capítulo 1: 
+Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. 
+
+- Capítulo 2: Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
 
 
 Material extra:

@@ -628,9 +628,12 @@ http://es.scribd.com/doc/19125272/POO-Punteros-en-C
 http://elvex.ugr.es/decsai/c/apuntes/punteros.pdf
 
 Tarea:
+
 - Transformar esta clase en una sub-clase que herede de Pelota 
+
 - Investigar sobre arrays dinámicos y aplicar el tipo <vector> ( parte la librería estandar de c++ ) a nuestro sistema de partículas.
-http://ronnyml.wordpress.com/2009/07/04/vectores-matrices-y-punteros-en-c/
-http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Biblioteca_Est%C3%A1ndar_de_Plantillas/Vectores
-- Investigar sobre las diferencia entre <vector> y <list>. 
-http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Librer%C3%ADa_Est%C3%A1ndar_de_Plantillas/Listas
+[http://ronnyml.wordpress.com/2009/07/04/vectores-matrices-y-punteros-en-c/](http://ronnyml.wordpress.com/2009/07/04/vectores-matrices-y-punteros-en-c/)
+[http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Biblioteca_Est%C3%A1ndar_de_Plantillas/Vectores](http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Biblioteca_Est%C3%A1ndar_de_Plantillas/Vectores)
+
+- Investigar sobre las diferencia entre vecto y list >. 
+[http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Librer%C3%ADa_Est%C3%A1ndar_de_Plantillas/Listas](http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Librer%C3%ADa_Est%C3%A1ndar_de_Plantillas/Listas)
