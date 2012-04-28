@@ -670,4 +670,6 @@ else
 note how the entire argument is restated. Instead of asking: is x less than 0 or greater than 10
 you need to ask: is x less than 0 or is x greater than 10
 
+# Elige tu propia Aventura 
 
+- Bueno, es suficiente! Quiero pasar a la acción! Ve al [Cap. 4](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_4_Primeros_pasos.md) para empezar a programar en oF cuanto antes!

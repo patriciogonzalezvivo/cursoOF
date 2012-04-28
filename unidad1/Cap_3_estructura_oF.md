@@ -329,11 +329,13 @@ También encontramos que existen 10 eventos nativos en cada ofApp que casi que s
 	gotMessage(ofMessage msg)
 ```
 
-# Compilando
+# Elige tu propia Aventura 
 
-Además de los archivos standar dentro de cada proyecto encontraremos los proyectos pre-hechos para abrirlos con los IDEs soportados por oF ( los proyectos en openFrameworks pueden utilizar cualquier IDE sin embargo los soportados por a nivel oficial son CodeBlocks, Xcode y VisualStudio. Existe mucha documentación para poder compilar desde Eclipse y actualemente desde linux sólo es necesario un editor de texto para poder editar, ya que gracias a Arturo Castro es posible compilar directamente desde los Makefiles con el comando make desde consola ). 
+- Ok, te convenciste que openFrameworks es para ti... pero no lo tienes instalado! No desesperes sólo debes ir al [ siguiente capítulo de esta unidad ](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Instalacion.md)
 
-OSX: [Xcode](http://www.openframeworks.cc/setup/xcode)
+- Si eres fanático de Processing y estas en el proceso del cambio quizá te interese leer el [Cap. 2 de la Unidad 2](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_3_desde_processing.md)
 
-Ubuntu: [CodeBlocks](http://www.openframeworks.cc/setup/linux-codeblocks)
+- En cambio, si te preguntas ¿Qué es C++? y ¿Cuáles son sus particularidades? sigue por el [capítulo 2 de la siguiente unidad](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_2_Que_es_cpp.md)
+
+- Si ya tenés instalada una versión de openFrameworks y muchas ganas de empezar de cero a repasar lo que ya conoces puedes ir a [Unidad 2, Cap. 4](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_4_Primeros_pasos.md)
 

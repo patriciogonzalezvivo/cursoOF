@@ -1,4 +1,4 @@
-# epositorio gitHub
+# Trabajando con Repositorios GitHub
 ##### por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
 Este tutorial contiene una breve introducción al sistema de control de versiones de repositorios [GIT](http://en.wikipedia.org/wiki/Git_%28software%29). La cual es una herramienta que te permite mantener fácilmente un backup de tu código, junto con la posibilidad de tener distintas versiones, colaboradores y por sobre todo la posibilidad de poder compartirlo fácilmente.
@@ -150,7 +150,7 @@ Otra distinción es que tener tu propio repositorio es mucho más independiente 
 
 Además, la fusión (merging) y la ramificación (branching) son las cosas que son fundamentales para la forma git trabaja, a fin de utilizarlo libremente.
 
-## More git resources:
+## More git resources (falta traducir):
 
 If you want to learn some more tricks, want to get more in-depth info, or run into a problem not mentioned in this tutorial, here's a collection of resources you should consult:
 
@@ -164,3 +164,12 @@ If you ever have a question about how to do things in git, it is often best to e
 
 There is also a great amount of articles, wiki pages, tutorials and blog posts about git, for example [git for the lazy](http://spheredev.org/wiki/Git_for_the_lazy) or [Git Immersion](http://library.edgecase.com/git_immersion/index.html).
 
+# Elige tu propia Aventura 
+
+- Evidentemente te gustan, o por lo menos te intrigan, los desafíos y el conocimiento duro informático. ¿Qué tal repasar juntos algunos [conceptos sobre Unix para entender el origen de C++](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_1_intro_a_unix.md)?  
+
+- Si te intriga ¿Qué es C++? sigue por el [capítulo 2 de la siguiente unidad](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_2_Que_es_cpp.md)
+
+- Si eres fanático de Processing y estas en el proceso del cambio quizá te interese leer el [Cap. 2 de la Unidad 2](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_3_desde_processing.md)
+
+- Bueno, es suficiente! Quiero pasar a la acción! Ve a la [Unidad 2, Cap. 4](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_4_Primeros_pasos.md) para empezar a programar en oF cuanto antes!

@@ -81,7 +81,8 @@ Para empezar a trabajar con openFrameworks, tendrá que descargar e instalar un 
 [codeblocks y makefiles](http://www.openframeworks.cc/setup/linux-codeblocks/)
 
 
+# Elige tu propia Aventura 
 
+- Vienes de Processing... eres un fanático de Daniel Shiffman y estás en el proceso del cambio quizá te interese leer el [Cap. 2 de la Unidad 2](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_3_desde_processing.md)
 
-En el próximo capítulo se detallará como instalar openFrameworks usando el repositorio git tanto en Linux como en Mac. Lo cual le permitirá utilizar la última versión de desarrollo y se parte de la vibrante comunidad de desarrolladores de oF y sus aportes.
-
+- Bueno, es suficiente! Quiero pasar a la acción! Ve a la [Unidad 2, Cap. 4](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_4_Primeros_pasos.md) para empezar a programar en oF cuanto antes!

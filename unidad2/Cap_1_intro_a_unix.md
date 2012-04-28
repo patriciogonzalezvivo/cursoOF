@@ -294,7 +294,7 @@ Es importante resaltar que el carácter de redirección de salida “destruirá 
 
 [Más info](http://www.gulic.org/cila/files/Libro_CILA.pdf)
 
-# Aplicaciones Útiles ( en construcción )
+## Aplicaciones Útiles ( en construcción )
 
 www.ibm.com/developerworks/training/kp/l-kp-command/index.html
 www.commandlinefu.com/commands/browse/
@@ -310,3 +310,12 @@ progit.org/book/index.html
 [SSH](http://blog.urfix.com/25-ssh-commands-tricks)
 
 XSCREEN
+
+
+# Elige tu propia Aventura 
+ 
+- Estas chocho siguiendo el programa propuesto y te gusta no perderte ni un punto. Entonces el [siguiente capítulo](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_2_Que_es_cpp.md) es para ti. Allí veremos las particularidades de C++;
+
+- Si eres fanático de Processing y estas en el proceso del cambio quizá te interese leer el [Cap. 2 de la Unidad 2](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_3_desde_processing.md)
+
+- Bueno, es suficiente! Quiero pasar a la acción! Ve a la [Unidad 2, Cap. 4](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_4_Primeros_pasos.md) para empezar a programar en oF cuanto antes!

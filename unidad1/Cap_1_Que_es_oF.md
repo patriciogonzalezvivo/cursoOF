@@ -80,3 +80,15 @@ Para obtener la documentación de vídeo más y detalles del proceso de diseño 
 <iframe src="http://player.vimeo.com/video/29391633" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 Una gran cosa acerca openFrameworks es que lo fácil de incorporar código C + + desde casi cualquier biblioteca. Para ello, Arturo y Kyle utiliza la [biblioteca FaceTracker de Jason Saragih](http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html) para crear una técnica de reemplazo de la cara que Kyle llamado "traje de Scramble", inspirada en la tecnología de ficción a partir de 1977 Philip K. Dick, la novela, "A Scanner Darkly". Es efectivamente un manto que oculta la identidad del usuario por lo que es imposible de describir o recordar ellos.
+
+# Elige tu propia Aventura 
+
+- Ok, te convenciste que openFrameworks es para ti... pero no lo tienes instalado! No desesperes sólo debes ir al [ siguiente capítulo de esta unidad ](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_2_Instalacion.md)
+
+- Si ya programaste y te intriga saber más en profundidad de que se trata openFrameworks. Puede saltar hasta el [Cap. 3 de esta unidad](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/Cap_3_estructura_oF.md) y aprender como esta estructurado oF
+
+- Si eres fanático de Processing y estas en el proceso del cambio quizá te interese leer el [Cap. 2 de la Unidad 2](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_3_desde_processing.md)
+
+- En cambio, si te preguntas ¿Qué es C++? sigue por el [capítulo 2 de la siguiente unidad](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_2_Que_es_cpp.md)
+
+- Si ya tenés instalada una versión de openFrameworks y muchas ganas de empezar de cero a repasar lo que ya conoces puedes ir a [Unidad 2, Cap. 4](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/Cap_4_Primeros_pasos.md)
