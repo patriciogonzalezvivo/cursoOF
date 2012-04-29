@@ -50,11 +50,9 @@ El siguiente paso es abrir una Terminal ( en las nuevas distribuciones de ubuntu
 
 ![git-bash-win](http://patriciogonzalezvivo.com/images/tutoriales/gitBash.jpg)
 
-
 ## 2. Bajara la última versión de desarrollo de openFrameworks 
 
 El siguiente paso son una serie de comandos para consola bajar (o clonar) las librerías de openFrameworks que se encuentran en el repositorio GitHub dentro de un directorio en el escritorio. Es posible que aquí la ruta al mismo sea distinto.
-
 
 ``` 
 	cd Desktop 
@@ -62,10 +60,10 @@ El siguiente paso son una serie de comandos para consola bajar (o clonar) las li
 	cd openFrameworks
 ```
 
-Felicitaciones tienes todos lo que necesitas para empezar a utilizar openFrameworks!!
+Felicitaciones tienes todos lo que necesitas para empezar a utilizar openFrameworks!! Si no es así, quizá te convenga [otro buen tutorial de instalación para windows en español como el que ha hecho Emilio Vegas Ubillus](http://diariowm.wordpress.com/2012/04/07/tutorial-instalando-openframeworks-windows/)
 
 
-Nota: hasta que no se haga el release de la 0071 debemos cambiar al branch ```develop``` que tiene las últimas mejoras. Puntual mente viene con varios nuevos ejemplos y un maravilloso generador de proyectos.
+Nota: hasta que no se haga el release de la 0071 debemos cambiar al branch ```develop``` que tiene las últimas mejoras. Puntualmente viene con varios nuevos ejemplos y un maravilloso generador de proyectos.
 
 Para ello basta con escribir: 
 
