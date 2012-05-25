@@ -16,6 +16,17 @@ void testApp::update(){
     unsigned char *pixelsIn = cam.getPixels();
     unsigned char *pixelsOut = img.getPixels();
     
+    //  Exiten tres desafios para hacer:
+    //  
+    //  1- Convertir la imagen en grayscale
+    //
+    //  2- Encontrar un algoritmo o manera de itinerar por cada pixel 
+    //  invirtiendo la imagen solo horizontalmente  
+    //
+    //  3- Enmascarar la entrada de la camara con el video fingers.mov 
+    //  que se encuentra en el bin/data
+    //  
+
     for(int i = 0; i < width*height*3 ; i++){
         pixelsOut[i] = pixelsIn[i];
     }
