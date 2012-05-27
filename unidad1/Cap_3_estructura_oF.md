@@ -116,7 +116,6 @@ El archivo .cpp contiene el código de la clase en cuestión con sus devidas ins
 	{
   		ofCircle(x,y,2);
 	}
-Que pasa por aca?
 
 ```
 
