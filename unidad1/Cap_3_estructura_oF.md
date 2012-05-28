@@ -117,6 +117,8 @@ El archivo .cpp contiene el código de la clase en cuestión con sus devidas ins
   		ofCircle(x,y,2);
 	}
 
+```
+
 [Para más información sobre clases](http://www.modelo.edu.mx/univ/virtech/prograc/cplus5.htm)
 
 # Estructura de un proyecto en oF
