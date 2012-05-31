@@ -1,7 +1,7 @@
-# Abriendo la caja de herramientas de oF
+# Abriendo la caja de herramientas
 ##### por [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
 
-OpenFrameworks cuenta con algunas herramientas que nos van ayudar enormemente a la hora de hacer aplicaciones. Las mismas simplifican funciones matemáticas, que si sabemos utilizarlas, podremos resolver cuestiones complejas de forma elegante y eficiente.
+OpenFrameworks cuenta con algunas herramientas que nos van ayudar enormemente. Estas herramientas buscan simplificar funciones matemáticas para resolver de forma elegante y eficiente algunas cuestiones un tanto engorrosas.
 
 ## Objetos
 
@@ -13,9 +13,9 @@ En el [último capítulo de la unidad anterior](https://github.com/patriciogonza
 	y += ( mouseY - y )*0.1;
 ~~~~
 
-Si tuviéramos varios círculos que mover tendríamos rápidamente cientos de pares de variables haciendo cálculos vectoriales similares a este.
+Si tuviéramos varios círculos que mover tendríamos rápidamente cientos de pares de lineas como estas.
 
-Es por eso que una buena idea de la comunidad oF fue armar un objeto que maneje posiciones y se encargue de lidiar con los valores en `x`, `y` y `z`. Es por eso que cada uno de estos objetos contienen tres `float` para cada uno de ellos, junto algunas funciones útiles. Este tipo de objetos se llama `ofPoint` y se van a comportar bastante similar a cualquier otra variable.
+Es por eso que una buena idea de la comunidad oF fue armar un objeto que maneje posiciones y se encargue de lidiar con los valores en `x`, `y` y `z`. Precisamente cada uno de estos objetos contienen tres `float` para cada uno de ellos, junto algunas funciones útiles. Este tipo de objetos se llama `ofPoint` y se van a comportar bastante similar a cualquier otra variable.
 
 Se declaran de la siguiente manera:
 
@@ -80,9 +80,11 @@ Al igual que existen funciones que toman `ofPoint` como parámetros existen vari
 ~~~~
 
 ## [Funciones Matemáticas](http://www.openframeworks.cc/documentation/math/ofMath.html)
-Si bien ya hemos utilizado algunas funciones como `ofBackground()`, `ofGetWindowWidth()` en esta sección nos vamos a detener en aquellas que realizan [operaciones matemáticas](http://www.openframeworks.cc/documentation/math/ofMath.html)
+Si bien ya hemos utilizado algunas funciones como `ofBackground()`, `ofGetWindowWidth()` en esta sección nos vamos a detener en aquellas que realizan [operaciones matemáticas](http://www.openframeworks.cc/documentation/math/ofMath.html) con las que viene provisto . Existe cierta elegancia y elegancia al poder resolver cuestiones complejas utilizando funciones y métodos matemáticos. Es el guiño del ojos del programador. Sutilezas imperceptibles.
 
-### ofRandom()
+El primer paso en este camino, es aprender a amar cada uno de los valores que hay entre 0.0 y 1.0 . 
+
+### ofRandomf()
 
 ### ofNoise()
 
@@ -90,7 +92,7 @@ Si bien ya hemos utilizado algunas funciones como `ofBackground()`, `ofGetWindow
 
 ### ofClamp()
 
-### ofToString()
+### ofLerp()
 
 ###Nativos de C++ (STL)
 sin, cos, atan, sqrt, abs
