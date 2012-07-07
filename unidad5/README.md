@@ -1,16 +1,11 @@
 [![logo](http://www.patriciogonzalezvivo.com/images/tutoriales/oF-workshop.jpg)](http://www.patriciogonzalezvivo.com)
 
-# Unidad nº 5: Simulaciones
-Fractales. Life-games. Células Autómatas. Reacción-difusión. El Conductismo y la Teoría general de los Sistemas. Segregación y preferencia.  Sistemas auto-organizados (flocking systems). Algoritmos genéticos (búsquedas y evolución). Redes Neuronales.
+# Unidad nº5: ampliando el horizonte
+
+Agregando addons a proyectos. ofxOpenCV, ofxOsc, ofxXmlSettings. [ofxAddons.com](http://www.ofxaddons.com) como fuente de inspiración y recursos. Apropiación de tecnología. Recorrido por algunos addons y proyectos que utilizan librerías externas a openFrameworks o dispositivos multimedia. EyeTracker. ofxFaceTracker. ofxIPcam, ofxARToolKit, ofxPTAMM, ofxKinect, ofxOpenNI, e.
 
 Material extra:
 
-- “Generative Art” Matt Pearson, Manning (2011)
-
-- "The Computational Beauty of Nature: Computer Explorations of Fractals, Chaos, Complex Systems, and Adaptation" Gary William Flake
-- "Turtles, Termites, and Traffic Jams: Explorations in Massively Parallel Microworlds", Mitchell Resnick, MIT Press (1997)
-- "Creative Code: Aesthetics + Computation", John Maeda & Red Burns, Thames & Hudson (2004)
-
-- cap 13-18. “Programming Interactivity” Joshua Noble
+- [ITP Class: Appropriating New Technologies  Kyle McDonald](http://github.com/kylemcdonald/AppropriatingNewTechnologies)
 
 [![logoFinal](http://www.patriciogonzalezvivo.com/greenTreePie.jpg)](http://www.patriciogonzalezvivo.com)
