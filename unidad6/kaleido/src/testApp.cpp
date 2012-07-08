@@ -28,15 +28,13 @@ void testApp::draw(){   // GPU
     
     
     shader.begin();
-    shader.setUniform1f("time", ofGetElapsedTimef());
-    shader.setUniform2f("mouse", mouseX, mouseY);
-    shader.setUniform2f("size", width, height);
     shader.setUniformTexture("text", video.getTextureReference(), 0);
-    glBegin(GL_TRIANGLE_FAN);
+    shader.setUniform1f("rotate", ofGetElapsedTimef()*0.1);
+    shader.setUniform2f("size", width, height);
     
+    glBegin(GL_TRIANGLE_FAN);
     glTexCoord2f(A.x, A.y);
     glVertex3f(A.x, A.y, 0.0);
-
     for(int i = 0; i < 7; i++){    
         glTexCoord2f(p[i%2].x, p[i%2].y);
         ofVec2f e = radio.getRotated(60*i) + A;
