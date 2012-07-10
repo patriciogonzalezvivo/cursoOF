@@ -58,6 +58,8 @@ Fractales. Life-games. Células Autómatas. Reacción-difusión. El Conductismo 
 
 ### En español
 
+- [Blog de Juan Pablo MacDougall](http://ofmac.blogspot.com.ar/)
+
 - [El foro de este curso](http://groups.google.com/group/ofTaller) es en español para comenzar a tejer una red local. Una buena antesala para sacarse dudas en la lengua materna
 
 ### En ingles
