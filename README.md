@@ -2,7 +2,7 @@
 
 # Curso de openFramework
 
-[openFrameworks](http://www.openframeworks.cc/) es un kit de herramientas de código abierto C++  y multiplataforma diseñado para ayudar al proceso creativo, proporcionando un marco sencillo, intuitivo  y transparente para la experimentación. El kit de herramientas está diseñado para funcionar como un pegamentode uso general, envolviendo varias bibliotecas de uso común, incluyendo: OpenGL, Glew, GLUT, libtess2 y Cairo para gráficos, RTAudio, PortAudio o FMOD y APC para la entrada, salida y el análisis de audio, FreeType para las fuentes, FreeImage para guardar y cargar imagenes, Quicktime y videoinput para reproducción de vídeo, Poco para una variedad de utilidades,y muchas otras mas.
+[openFrameworks](http://www.openframeworks.cc/) es un kit de herramientas de código abierto C++  y multiplataforma diseñado para ayudar al proceso creativo, proporcionando un marco sencillo, intuitivo  y transparente para la experimentación. El kit de herramientas está diseñado para funcionar como un pegamento de uso general, envolviendo varias bibliotecas de uso común, incluyendo: OpenGL, Glew, GLUT, libtess2 y Cairo para gráficos, RTAudio, PortAudio o FMOD y APC para la entrada, salida y el análisis de audio, FreeType para las fuentes, FreeImage para guardar y cargar imagenes, Quicktime y videoinput para reproducción de vídeo, Poco para una variedad de utilidades,y muchas otras mas.
 
 Desarrollado por [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](http://muonics.net/) y [Arturo Castro](http://arturocastro.net/), junto con una [comunidad de desarrolladores](http://www.openframeworks.cc/community/) que crece día a día poniendo al alcance de artistas y creativos código de gran estabilidad, robustez y profesionalismo. Es por eso que los objetivos básicos de este taller no sólo es aprender a realizar instalaciones y aplicaciones básicas, sino también aprender a compartir y colaborar en esta fructífera comunidad internacional. 
 
@@ -10,7 +10,8 @@ Desarrollado por [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](ht
 ## Objetivos
 
 - lograr calidad técnica básica, sin caer en tecnicismos, que brinde un punto de partida para investigar inquietudes personales.
-- disfrutar del proceso de crear junto con otros
+
+- disfrutar del proceso de crear junto con otros
 
 - promover el espíritu y filosofía openSource tejiendo una comunidad
 
@@ -33,13 +34,17 @@ Desarrollado por [Zach Lieberman](http://thesystemis.com/), [Theodore Watson](ht
 ### [Unidad nº1: Introducción](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad1/README.md)
 ¿Qué es openFrameworks? ¿Qué se puede hacer en oF? ¿Cómo se instala?. Compilando y ejecutando ejemplos. Estructura del testApp (setup, update y draw). Uso y manejo de repositorios Git.
 
-### [Unidad nº2: La base dura](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/README.md)
+
+### [Unidad nº2: La base dura](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad2/README.md)
 Breve relato sobre la relación de los sistemas Unix y C. Presentación del lenguaje C++. Cómo dibujar objetos sencillos en pantalla. Familiarización con el sistema de ejes cartesianos. ¿Qué es una variable? ¿Qué tipos hay? Jugar a mover cosas con el mouse. Cargar imágenes y moverlas. 
 
-### [Unidad nº3: La belleza y la matemática](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad3/README.md)
-Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
 
-### [Unidad nº4: Procesando imágenes en tiempo real](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad4/README.md)
+### [Unidad nº3: La belleza y la matemática](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad3/README.md)
+Lo Apolíneo y lo Dionisíaco. “Noise” vs “Random”. Trigonometría básica aplicada. Del sistema de coordenadas cartesianas, coordenadas polares y sus usos. Cannon, secuencia Fibonacci, sección áurea y regla de los tercios. Utilización de valores normalizados, módulos y casteo de variables. Mapeo e interpolación. Visualización de datos. 
+Matemática vectorial y fuerzas aplicadas a un sistema de partículas. Posición, velocidad y aceleración. Gravedad y repulsión. Colisiones.
+
+
+### [Unidad nº4: Procesando imágenes en tiempo real](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad4/README.md)
 Descripción detallada y extensa sobre arrays y punteros. Jugar con la alocación en memoria. Recorrer una imagen pixel por pixel. Aplicaciones interactivas estilo “Mirror”. Optimizar el sistema de partículas para utilizar imágenes y video.
 
 ### [Unidad nº5: Ampliando el horizonte](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad5/README.md)
@@ -51,7 +56,8 @@ Introducción al motor 3D de openGL.  Matrices de transformación.  ofPushMatrix
 
 ### [Unidad nº 7: Simulaciones](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad7/README.md)
 Fractales. Life-games. Células Autómatas. Reacción-difusión. El Conductismo y la Teoría general de los Sistemas. Segregación y preferencia.  Sistemas auto-organizados (flocking systems). Algoritmos genéticos (búsquedas y evolución). Redes Neuronales.
-### [Clase nº8: Meta programar](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad8/README.md)
+
+### [Clase nº8: Meta programar](https://github.com/patriciogonzalezvivo/cursoOF/blob/master/unidad8/README.md)
  La integración del pensamiento divergente/convergente como modelo de un diseño mixto. Programación en paralelo y GLSL Shaders. Diseño de aplicaciones mediante patrones y modelos. El proceso de desarrollo desde el diagrama UML y su implementación.
 
 ## Material y referencias
